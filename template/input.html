@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+        <title>index</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+       <!--  <link rel="stylesheet" type="text/css" href="/hout2/static/src/css/bace.css"> -->
+        <link rel="stylesheet" type="text/css" href="/hout2/static/src/js/lib/layui/css/layui.css">
+        <link rel="stylesheet" type="text/css" href="/hout2/static/src/css/public.css">
+        <link rel="stylesheet" type="text/css" href="/hout2/static/src/css/manage.css">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+    <!--[if lt IE 10]>
+            <script src="http://wufff.question_images.dev.dodoedu.com/static/src/js/tools/ie_update.js"></script>
+    <![endif]-->
+<div id="header_m">
+    <div class="pull-left leftroom">
+        <i class="fa fa-bars" style="visibility: hidden;"></i>
+    </div>
+    <div class="pull-left">
+        <a href="#" class="logo">
+            中国问题研究文献出版目录及服务平台后台管理
+        </a>
+    </div>
+    <span class="author">
+        <a href="/index/logOut"><span>退出</span></a>
+    </span>
+</div>
+
+   
+<div class="clearfix mianWrap" >
+    <div class="article_nav pull-left">
+        <div class="author_left">
+           <img src="http://images.dev.dodoedu.com/resize/34x34/attachments/87959cef79c0865f.jpg" alt="">
+             <span>test02</span>
+        </div>
+     <div class="nav_content" id="article_nav">
+        <div class="inner">
+                <div class="model active">
+                    <div class="title">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        主页
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                     <ul>
+                        <li >
+                            <a href="page.html">表格</a>
+                        </li>
+                        <li class="">
+                            <a href="dialog.html">弹窗</a>
+                        </li>
+                        <li class="active">
+                            <a href="input.html">输入</a>
+                        </li>
+                    </ul>
+                 </div>
+                <div class="model">
+                    <div class="title">
+                        <i class="fa fa-bars"></i>
+                        分类管理
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <ul>
+                        <li class="">
+                            <a href="/manage/classifyList">分类管理</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="model">
+                    <div class="title">
+                        <i class="fa fa-tags"></i>
+                        产品管理
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <ul>
+                        <li class="">
+                            <a href="/manage/goodsexamine?left_menu=7&head_user=0">产品审核</a>
+                        </li>
+                        <li class="">
+                            <a href="/manage/goodsrelease?left_menu=8">产品发布</a>
+                        </li>
+                    </ul>
+                </div>
+                 <div class="model">
+                    <div class="title">
+                        <i class="fa fa-book"></i>
+                        内容管理
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <ul>
+                        <li class="">
+                            <a href="/manage/goodsList?origin=sync">内容同步</a>
+                        </li>
+                        <li class="">
+                            <a href="/manage/goodsList?origin=verify">内容审核</a>
+                        </li>
+                        <li class="">
+                            <a href="/manage/goodsList?origin=modify">内容列表</a>
+                        </li>
+                        <li class="">
+                            <a href="/manage/authorList?origin=modify">作者列表</a>
+                        </li>
+                    </ul>
+                   </div>
+                    <div class="model">
+                        <div class="title">
+                            <i class="fa fa-user-circle" aria-hidden="true"></i>
+                            账户管理
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </div>
+                        <ul>
+                            <li class="">
+                                <a href="/manage/user">个人用户</a>
+                            </li>
+                            <li class="">
+                                <a href="/manage/orguser">机构用户</a>
+                            </li>
+                            <li class="">
+                                <a href="/manage/adminuser">管理用户</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="model">
+                        <div class="title">
+                            <i class="fa fa-file" aria-hidden="true"></i>
+                            订单管理
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </div>
+                        <ul>
+                            <li class="">
+                                <a href="/manage/paylist">充值记录</a>
+                            </li>
+                            <li class="">
+                                <a href="/manage/exchangelist">兑换记录</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="model">
+                        <div class="title">
+                            <i class="fa fa-file" aria-hidden="true"></i>
+                            日志管理
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </div>
+                        <ul>
+                            <li class="">
+                                <a href="/manage/goodslog">产品日志</a>
+                            </li>
+                            <li class="">
+                                <a href="/manage/syslog">操作日志</a>
+                            </li>
+                        </ul>
+                    </div>        
+              </div>
+         </div>
+    </div>
+
+     <!-- 主要内容开始 -->
+    <div id="content">
+           <!--  全局搜索 -->
+            <!-- 用户信息 -->      
+            <div class="content_author">
+                <div class="pull-left editeAwrap">
+                    <div class="editeA">
+                        <img src="http://images.dev.dodoedu.com/resize/34x34/attachments/87959cef79c0865f.jpg" id="headImgbt_img" alt="" class="pull-left">
+                        <div class="pull-left">
+                            <div class="people" style="margin-bottom: 3px;">test02</div>
+                            <div class="people_s" style="margin-bottom: 3px;">超级管理员</div>
+                            <div class="people_d" id="headImgbt" style="color:#1E9FFF;font-size:12px;cursor: pointer;">更换头像</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pull-right help">
+                    <a href="">使用帮助</a>
+                </div>
+            </div>                
+            <div class="content_main spot">
+                   <form id="upload" class="layui-form  clearfix" lay-filter="form" method="post">
+                        <div class="formleft">
+                        	<div class="item clearfix">
+							    <div class="dt">
+							        <span class="white">*</span>text：</div>
+							    <div class="dd">
+							        <div class="input title">
+							            <input type="text" class="layui-input" name="title" lay-verify="required" id="title" placeholder="" value="">
+							        </div>
+							    </div>
+							</div>
+							<div class="item clearfix">
+							    <div class="dt">
+							        <span class="white">*</span>1-100正整数：</div>
+							    <div class="dd">
+							        <div class="input">
+							            <input type="text" class="layui-input" name="wo_transname" lay-verify="num" id="wo_transname" placeholder="" value="">
+							        </div>
+							    </div>
+							</div>
+							<div class="item clearfix">
+							    <div class="dt"><span class="white">*</span>网址：</div>
+							    <div class="dd">
+							        <div class="input">
+							        	<select name="" id="" name="wz">
+							        		 <option value="">请选择</option>
+							        		 <option value="1">122222222</option>
+							        		 <option value="2">12333333333</option>
+							        	</select>
+							        </div>
+							    </div>
+							</div>
+							<div class="item clearfix">
+							    <div class="dt"><span class="white">*</span>富文本编辑：</div>
+							    <div class="dd">
+							        <div class="input">
+							        	<input type="text" class="layui-input" name="fulltxt" lay-verify="ueditor" placeholder="" value="">
+							            <div id="fulltxt" class="uediter"></div>
+							        </div>
+							    </div>
+							</div>
+							<div class="item clearfix">
+							    <div class="dt"><span class="white">*</span>富文本编辑：</div>
+							    <div class="dd">
+							        <div class="input title">
+                                        <input type="text" class="layui-input" name="address" lay-verify="ueditor" placeholder="" value="">
+                                        <div id="address" class="uediter"></div>
+                                    </div>
+							    </div>
+							</div>
+							<div class="item clearfix">
+							    <div class="dt"><span class="white">*</span>密码：</div>
+							    <div class="dd">
+							        <div class="input"><input type="text" class="layui-input" name="contacts" lay-verify="pass" id="contacts" placeholder="" value=""></div>
+							    </div>
+							</div>
+							<div class="item clearfix">
+							    <div class="dt"><span class="white">*</span>电话：</div>
+							    <div class="dd">
+							        <div class="input"><input type="text" class="layui-input" name="telphone" lay-verify="phone" id="telphone" placeholder="" value=""></div>
+							    </div>
+							</div>
+							<div class="item clearfix">
+							    <div class="dt"><span class="white">*</span>三联下拉：</div>
+							    <div class="dd">
+                                    <div  class="input">
+                                         <div class="layui-unselect layui-form-select cu-seclect">
+                                               <div class="layui-select-title">
+                                                     <input type="text" placeholder="" value="" readonly id="classify_name" class="layui-input layui-unselect">
+                                                      <input type="hidden" name="classify_id" value="" id="classify_id">
+                                                      <i class="layui-edge"></i>
+                                                </div>
+                                                <div class="select-main layui-anim list-box">
+                                                       <div class="list-scroll" id="list-scroll"></div>
+                                                       <div class="list-scroll" id="list-scroll1"></div>
+                                                     <div class="list-scroll" id="list-scroll2"></div>
+                                                </div>
+                                        </div> 
+                                    </div>							        
+							    </div>
+							</div>                         
+                           <!--   <div class="item clearfix">
+							    <div class="dt"></div>
+							    <div class="dd">
+							        <div class="input"></div>
+							    </div>
+							</div>			 -->				
+							<div class="item clearfix upimg">
+							    <div class="dt"><span class="white">*</span>代Img代a：</div>
+							    <div class="dd">
+							        <div class="upBtn_class">
+                                        <a class="layui-btn layui-btn-primary" id="upIco1" >点击上传</a>
+    							        <div id="upIco1_list" class="upImg_box">
+    							             <div id="upIco_info" class="info"></div>
+    							             <input type="hidden"  lay-verify="upfile"  name="thumbnail" value="" id="upIco1_value">
+                                             <a href="">
+                                                 <img src="" alt="" id="upIco1_img">
+                                             </a>
+                                         </div>
+                                     </div>
+							     </div>
+							 </div>
+                             <div class="item clearfix upimg">
+                                <div class="dt"><span class="white">*</span>不代Img不a：</div>
+                                <div class="dd">
+                                    <div class="upBtn_class"><a class="layui-btn layui-btn-primary" id="upIco2">点击上传</a>
+                                        <div id="upIco2_list" class="upImg_box">
+                                             <div id="upIco2_info" class="info"></div>
+                                             <input type="hidden" lay-verify="upfile"  name="thumbnail" value=""  id="upIco2_value">
+                                         </div>
+                                    </div>
+                                 </div>
+                             </div>                                    
+							<div class="item">
+	                             <div class="dt"><span class="white">*</span></div>
+	                             <div class="dd">
+	                             	<button class="layui-btn layui-btn-normal" lay-filter="form" lay-submit>保存</button>
+	                             </div>	
+                            </div>
+                        </div>
+                        <div class="formright">
+                             <div class="item clearfix">
+                                <div class="dt"><span class="white">*</span>学术活动：</div>
+                                <div class="dd">
+                                    <div class="input"><input type="text" class="layui-input" name="wo_events" lay-verify="required" id="wo_events" placeholder="" value=""></div>
+                                </div>
+                            </div>
+                            <div class="item clearfix">
+                                <div class="dt"><span class="white">*</span>期刊论文：</div>
+                                <div class="dd">
+                                    <div class="input"><input type="text" class="layui-input" name="wo_article" lay-verify="" id="wo_article" placeholder="" value=""></div>
+                                </div>
+                            </div>
+                            <div class="item clearfix">
+                                <div class="dt"><span class="white">*</span>专著图书：</div>
+                                <div class="dd">
+                                    <div class="input"><input type="text" class="layui-input" name="wo_monograph_book" lay-verify="" id="wo_monograph_book" placeholder="" value=""></div>
+                                </div>
+                            </div>
+                            <div class="item clearfix">
+                                <div class="dt"><span class="white">*</span>图书篇章：</div>
+                                <div class="dd">
+                                    <div class="input"><input type="text" class="layui-input" name="wo_chapter" lay-verify="" id="wo_chapter" placeholder="" value=""></div>
+                                </div>
+                            </div>
+                            <div class="item clearfix">
+                                <div class="dt"><span class="white">*</span>会议论文：</div>
+                                <div class="dd">
+                                    <div class="input"><input type="text" class="layui-input" name="wo_conferencepaper" lay-verify="" id="wo_conferencepaper" placeholder="" value=""></div>
+                                </div>
+                            </div>
+                            <div class="item clearfix">
+                                <div class="dt"><span class="white">*</span>成果：</div>
+                                <div class="dd">
+                                    <div class="input"><input type="text" class="layui-input" name="wo_achievement" lay-verify="" id="wo_achievement" placeholder="" value=""></div>
+                                </div>
+                            </div>
+                            <div class="item clearfix">
+                                <div class="dt"><span class="white">*</span>其他成果：</div>
+                                <div class="dd">
+                                    <div class="input"><input type="text" class="layui-input" name="wo_otherwork" lay-verify="" id="wo_otherwork" placeholder="" value=""></div>
+                                </div>
+                            </div>
+                            <div class="item clearfix">
+                                <div class="dt"><span class="white">*</span>其他成果：</div>
+                                <div class="dd">
+                                    <div class="input">
+                                        <textarea name="adf" id="" class="layui-textarea" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                            </div>                                 
+                        </div>   
+                    </form>
+             </div>
+           </div>
+      </div>            
+</div>
+                             
+
+
+          <script type="text/javascript" charset="utf-8" src="http://wufff.question.dev.dodoedu.com/static/ueditor/ueditor.config.js"></script>
+          <script type="text/javascript" charset="utf-8" src="http://wufff.question.dev.dodoedu.com/static/ueditor/ueditor.all.js"> </script>
+          <script type="text/javascript" charset="utf-8" src="http://wufff.question.dev.dodoedu.com/static/ueditor/lang/zh-cn/zh-cn.js"></script>                                
+          <div class="ueditoControl" id="ueditoControl" style="display: none;padding: 3px;">
+                 <script id="editor" type="text/plain" style="width:100%;height:320px;"></script>
+          </div>  
+        <script src="/hout2/static/src/js/lib/require.js"></script>
+        <script type="text/javascript" src="/hout2/static/src/js/tools/re-config.js"></script>
+        <script type="text/javascript" src="/hout2/static/src/js/forms.js"></script>
+         
+    </body>  
+</html>
+
+
+

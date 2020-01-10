@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+        <title>index</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+       <!--  <link rel="stylesheet" type="text/css" href="/hout2/static/src/css/bace.css"> -->
+        <link rel="stylesheet" type="text/css" href="/hout2/static/src/js/lib/layui/css/layui.css">
+        <link rel="stylesheet" type="text/css" href="/hout2/static/src/css/public.css">
+        <link rel="stylesheet" type="text/css" href="/hout2/static/src/css/manage.css">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+    <!--[if lt IE 10]>
+            <script src="http://wufff.question_images.dev.dodoedu.com/static/src/js/tools/ie_update.js"></script>
+    <![endif]-->
+<div id="header_m">
+    <div class="pull-left leftroom">
+        <i class="fa fa-bars" style="visibility: hidden;"></i>
+    </div>
+    <div class="pull-left">
+        <a href="#" class="logo">
+            中国问题研究文献出版目录及服务平台后台管理
+        </a>
+    </div>
+    <span class="author">
+        <a href="/index/logOut"><span>退出</span></a>
+    </span>
+</div>
+
+   
+<div class="clearfix mianWrap" >
+    <div class="article_nav pull-left">
+        <div class="author_left">
+           <img src="http://images.dev.dodoedu.com/resize/34x34/attachments/87959cef79c0865f.jpg" alt="">
+             <span>test02</span>
+        </div>
+     <div class="nav_content" id="article_nav">
+        <div class="inner">
+                <div class="model active">
+                    <div class="title">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        主页
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                     <ul>
+                        <li >
+                            <a href="table.html">表格</a>
+                        </li>
+                        <li class="active">
+                            <a href="dialog.html">弹窗</a>
+                        </li>
+                        <li>
+                            <a href="input.html">输入</a>
+                        </li>
+                    </ul>
+                 </div>
+                <div class="model">
+                    <div class="title">
+                        <i class="fa fa-bars"></i>
+                        分类管理
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <ul>
+                        <li class="">
+                            <a href="/manage/classifyList">分类管理</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="model">
+                    <div class="title">
+                        <i class="fa fa-tags"></i>
+                        产品管理
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <ul>
+                        <li class="">
+                            <a href="/manage/goodsexamine?left_menu=7&head_user=0">产品审核</a>
+                        </li>
+                        <li class="">
+                            <a href="/manage/goodsrelease?left_menu=8">产品发布</a>
+                        </li>
+                    </ul>
+                </div>
+                 <div class="model">
+                    <div class="title">
+                        <i class="fa fa-book"></i>
+                        内容管理
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <ul>
+                        <li class="">
+                            <a href="/manage/goodsList?origin=sync">内容同步</a>
+                        </li>
+                        <li class="">
+                            <a href="/manage/goodsList?origin=verify">内容审核</a>
+                        </li>
+                        <li class="">
+                            <a href="/manage/goodsList?origin=modify">内容列表</a>
+                        </li>
+                        <li class="">
+                            <a href="/manage/authorList?origin=modify">作者列表</a>
+                        </li>
+                    </ul>
+                   </div>
+                    <div class="model">
+                        <div class="title">
+                            <i class="fa fa-user-circle" aria-hidden="true"></i>
+                            账户管理
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </div>
+                        <ul>
+                            <li class="">
+                                <a href="/manage/user">个人用户</a>
+                            </li>
+                            <li class="">
+                                <a href="/manage/orguser">机构用户</a>
+                            </li>
+                            <li class="">
+                                <a href="/manage/adminuser">管理用户</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="model">
+                        <div class="title">
+                            <i class="fa fa-file" aria-hidden="true"></i>
+                            订单管理
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </div>
+                        <ul>
+                            <li class="">
+                                <a href="/manage/paylist">充值记录</a>
+                            </li>
+                            <li class="">
+                                <a href="/manage/exchangelist">兑换记录</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="model">
+                        <div class="title">
+                            <i class="fa fa-file" aria-hidden="true"></i>
+                            日志管理
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </div>
+                        <ul>
+                            <li class="">
+                                <a href="/manage/goodslog">产品日志</a>
+                            </li>
+                            <li class="">
+                                <a href="/manage/syslog">操作日志</a>
+                            </li>
+                        </ul>
+                    </div>        
+              </div>
+         </div>
+            </div>
+
+                 <!-- 主要内容开始 -->
+                    <div id="content">
+                           <!--  全局搜索 -->
+                            <!-- 用户信息 -->      
+                        <div class="content_main spot">
+                            <button class="layui-btn layui-btn-primary" id="btn">弹窗</button>
+                            <button class="layui-btn layui-btn-primary" id="btn2">Tags弹窗</button>
+                            <button class="layui-btn layui-btn-primary" id="btn_img" data-value="http://images.dev.dodoedu.com//wxt2019/5635e09ab12b7ac3.JPEG,http://images.dev.dodoedu.com//wxt2019/6715e09ab1464763.JPEG,http://images.dev.dodoedu.com//wxt2019/1465e09ab14ddb97.JPEG,http://images.dev.dodoedu.com//wxt2019/4365e09ab1757dc5.JPEG">图片连看</button>
+                        </div>
+                   </div>
+              </div>            
+        </div>
+                             
+            <style type="text/css">
+                #control dt{
+                    width: 82px;
+                }
+            </style>
+            <div class="control layui-layer-wrap" id="control" style="display: none;">
+                <form class="control-g layui-form spot" lay-filter="control">
+                    <dl class="clearfix">
+                        <dt><span class="red">*</span> 文本 :</dt>
+                        <dd class="lg-w">
+                            <input type="text" class="layui-input" name="classify_name" lay-verify="required">
+                        </dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt><span class="red">*</span> 单选 :</dt>
+                        <dd>
+                            <input type="radio" name="classify_status" title="启用" checked="" value="1">
+                            <input type="radio" name="classify_status" title="禁用" value="2">
+                        </dd>
+                    </dl>
+                     <dl class="clearfix">
+                        <dt><span class="red">*</span> textare :</dt>
+                        <dd>
+                           <textarea placeholder="请输入内容" class="layui-textarea lg-w" name="textarea"></textarea>
+                        </dd>
+                    </dl>      
+                     <dl class="clearfix">
+                        <dt><span class="white">*</span> 文字 :</dt>
+                        <dd class="text">
+                           文字内容 文字内容 文字内容 文字内容
+                        </dd>
+                    </dl> 
+                    <dl class="clearfix">
+                        <dt><span class="white">*</span> 上传 :</dt>
+                        <dd>
+                            <div class="upBtn_class">
+                                    <a class="layui-btn layui-btn-primary" id="upIco2">点击上传</a>
+                                    <div id="upIco2_list" class="upImg_box">
+                                    <div id="upIco2_info" class="info"></div>
+                                            <input type="hidden" lay-verify="upfile"  name="thumbnail" value=""  id="upIco2_value">
+                                    </div>
+                            </div>                           
+                        </dd>
+                    </dl>                                                         
+                    <button lay-submit="" lay-filter="control" id="submitControlBt" style="display: none"></button>
+                </form>
+            </div>
+                
+             <style type="text/css">
+                #control2 dt{
+                    width: 82px;
+                }
+            </style>
+            <div class="control layui-layer-wrap" id="control2" style="display: none;">
+                <form class="control-g layui-form spot" lay-filter="control2">
+                    <dl class="clearfix">
+                        <dt><span class="red">*</span> tags :</dt>
+                        <dd class="lg-w">
+                           <div class="tags-g" id="tag_1">
+                             <div class="tagsbox">                                
+                             </div>
+                              <select lay-filter="tag" >
+                                  <option value="">请选择</option>
+                                  <option value="1">内容一</option>
+                                  <option value="2">内容二</option>
+                                  <option value="3">内容三</option>
+                                  <option value="4">内容四</option>
+                                  <option value="5">内容五</option>
+                                  <option value="6">内容六</option>
+                                  <option value="7">内容七</option>
+                                  <option value="8">内容八</option>
+                                  <option value="9">内容九</option>
+                                  <option value="10">内容十</option>                                  
+                              </select>
+                              <input type="hidden" class="tag_value" lay-verify="tags"  name="tag_1">
+                           </div>
+                        </dd>
+                    </dl> 
+                    <dl class="clearfix">
+                        <dt><span class="red">*</span> tags :</dt>
+                        <dd class="lg-w">
+                           <div class="tags-g" id="tag_2">
+                             <div class="tagsbox">                                
+                             </div>
+                              <select lay-filter="tag">
+                                  <option value="">请选择</option>
+                                  <option value="1">内容一</option>
+                                  <option value="2">内容二</option>
+                                  <option value="3">内容三</option>
+                                  <option value="4">内容四</option>
+                                  <option value="5">内容五</option>
+                                  <option value="6">内容六</option>
+                                  <option value="7">内容七</option>
+                                  <option value="8">内容八</option>
+                                  <option value="9">内容九</option>
+                                  <option value="10">内容十</option>                                  
+                              </select>
+                              <input type="hidden" class="tag_value" lay-verify="tags" name="tag_2">
+                           </div>
+                        </dd>
+                    </dl>                     
+                   <dl class="clearfix">
+                        <dt><span class="red">*</span> 单选 :</dt>
+                        <dd class="lg-w">
+                            <select name="normal" lay-verify="required">
+                                <option value="">请选择</option>
+                                <option value="1">内容一</option>
+                                <option value="2">内容二</option>
+                                <option value="3">内容三</option>
+                                <option value="4">内容四</option>
+                                <option value="5">内容五</option>
+                                <option value="6">内容六</option>
+                                <option value="7">内容七</option>
+                                <option value="8">内容八</option>
+                                <option value="9">内容九</option>
+                                <option value="10">内容十</option>   
+                            </select>
+                        </dd>
+                    </dl>                                                                                    
+                    <button lay-submit="" lay-filter="control2" id="submitControlBt2" style="display: none"></button>
+                </form>
+            </div>            
+
+         <div class="lookMark" id="lookMark" style="display: none;">
+                <div class="mian" id="mainImg">
+                    
+                </div>
+                <span class="page" id="imgPages"><span id="currt">1</span> / <span id="totle">2</span></span>
+                <a class="left_bar bar">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="right_bar bar">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i> 
+                </a>  
+                <a class="rechore">
+                  <i class="fa fa-repeat" aria-hidden="true"></i>
+                </a>
+        </div>
+
+        <script src="/hout2/static/src/js/lib/require.js"></script>
+        <script type="text/javascript" src="/hout2/static/src/js/tools/re-config.js"></script>
+        <script type="text/javascript" src="/hout2/static/src/js/dialog.js"></script>
+         
+    </body>  
+</html>
+
+
+
