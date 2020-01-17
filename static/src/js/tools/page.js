@@ -9,24 +9,9 @@ define(['path','layui'], function(path,layui) {
 		getAjax: function(requestUrl, requestData, SuccessCallback) {
 			if ($("body").attr("requestData") == 0) {
 				SuccessCallback(_newobj, null);
-				$("body").attr({
-					"requestData": 1
-				});
+				$("body").attr({"requestData": 1});
 			} else {
-				  
-				if (path.is_local) {
-					requestData += "&jump=1";
-				}
 				$.get(requestUrl, requestData, function(data) {
-					if (data.type == "login") {
-						layer.msg("请先登录！", {
-							anim: -1
-						});
-						setTimeout(function() {
-							// window.location.href = "/";
-						}, 300)
-						return;
-					}
 					_newobj = data;
 					$("body").attr({"httpType": "getAjax"});
 					if (data.type == "error") {
@@ -286,8 +271,6 @@ define(['path','layui'], function(path,layui) {
 	};
 	return _self;
 
-
-
 	function queryString (str1,paramName){
             //获取url中"?"符后的字串
             var theRequest = new Object();
@@ -297,8 +280,8 @@ define(['path','layui'], function(path,layui) {
             }
             return theRequest[paramName];
    }
-});
 
+});
 
 //分页样式
 // .comm-page {

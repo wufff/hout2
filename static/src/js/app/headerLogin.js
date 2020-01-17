@@ -1,79 +1,71 @@
+define(["tools", "nicescroll", "path", "upLoad", "api","viewPhoto"], function(tool,nicescroll,path,upload,api,viewPhoto) {
+  var nav = tool.cookie("nav");
+  var navs = JSON.parse(nav);
+  if (nav) {
+    $.each(navs, function(index, val) {
+      if (val == 1) {
+        $(".article_nav").find(".model").eq(index).addClass('open')
+      };
+    });
+    $("#article_nav").find(".inner").css("visibility", "visible");
+  } else {
+    $("#article_nav").find(".inner").css("visibility", "visible");
+  }
 
-/**
- * 
- * @authors Your Name (you@example.org)
- * @date    2019-02-22 15:01:00
- * @version $Id$
- */
- 
-define(["layui","api","path","tools"],function(layui,api,path,tool){
-     var $ = jQuery = layui.jquery; 
-     var layer = layui.layer;
-     var form = layui.form;
-     var dialog;
-     
-     
-
-     form.on('select(filter)', function(data){
-        tool.filter(data.elem,data.value);
-    });   
-
-
-
-
-
-//登录按钮
-  $("#loginBt").click(function(){
-     var mobile =  $("#mobile").val();
-     var code = $("#code").val();
-     if(!mobile) {
-        layer.msg("请输入手机号");
-        return false;
-     }
-     if (!code) {
-        layer.msg("请输入验证码");
-        return false;
-     }
-     var url = path.api+"/adminApi/checkCaptcha";
-     var ajaxData = { 
-         mobile:mobile,
-         valid_code:code,
-         opt:105
-     }
-     //先验证验证码在登录
-    api.ajaxPost(url,ajaxData,function(obj){
-         var loginurl = path.api+"/adminApi/login";
-         api.ajaxPost(loginurl,ajaxData,function(obj){
-              console.log(obj);
-              window.location.reload();
-        })
-    })
+  $("#content").niceScroll({
+    cursorcolor: "#c2c2c2"
   });
+  $("#article_nav").niceScroll({
+    cursorcolor: "#c2c2c2"
+  });
+  $(".article_nav").find(".title").click(function() {
+    if ($(this).parents(".model").hasClass('active')) {
+      return;
+    }
+    if ($(this).parents(".model").hasClass('open')) {
+      $(this).parents(".model").find("ul").slideUp(300, function() {
+        $("#article_nav").getNiceScroll().onResize();
+        $(this).parents(".model").removeClass('open');
+      });
 
-// //拦截a
-// $("a").click(function(){
-//    if($(this).hasClass('noLogin')){
-//       return true;
-//    }else{
-//       var length = $("#header_loginBt").length; 
-//       //console.log(length);
-//        if (length > 0) {
-//           login();
-//           return false;
-//        }
-//    }
-// })
+    } else {
+      $(this).parents(".model").find("ul").slideDown(300, function() {
+        $("#article_nav").getNiceScroll().onResize();
+        $(this).parents(".model").addClass('open');
+      });
+    }
+  })
 
-//倒计时
+  $(".article_nav").find("a").click(function() {
+    var herf = $(this).attr("href");
+    // window.location.href = herf;
+    var arry = [];
+    $(".article_nav").find(".model").each(function(index, el) {
+      if ($(el).hasClass('open')) {
+        arry.push(1)
+      } else {
+        arry.push(0)
+      }
+    });
+    tool.cookie("nav", JSON.stringify(arry))
+    window.location.href = herf;
+    return false
+  })
 
 
 
+  upload.img("headImgbt", function(parem) {
+    var url = '上传接口'
+    var aData = {
+      img: parem
+    }
+    // api.ajaxGet(url,aData,function(res){
+    //    api.smsg("修改成功")
+    // })
+    console.log(parem);
+
+  })
 
 
-
-
- 
-
-
-
+  return "wecome"
 })

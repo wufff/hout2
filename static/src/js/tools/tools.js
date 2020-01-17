@@ -3,7 +3,11 @@ define(['path','layui'],function(path,layui){
      var $ = jQuery = layui.jquery;
      var my =  {
          smsg:function(str){
-            layer.msg(str);
+            if(str){
+              layer.msg(str);
+            }else{
+               layer.msg("操作成功！");  
+            }
             setTimeout(function(){
                   window.location.reload();
             },400)
@@ -25,12 +29,25 @@ define(['path','layui'],function(path,layui){
              })
              return data;
          },
-        filter: function(ele, value) {
-            var k = $(ele).attr("v-k");
+        filter: function(k,value) {
+            var k = k;
             var v = value;
             var oldUrl = GetUrl();
             var obj = {};
             obj[k] = v;
+            var parmObj = getQueryStringArgs();
+            var baseUrl = GetUrl();
+            $.extend(parmObj,obj);
+            var parmStr = getQueryforUrl(parmObj);
+            console.log(parmStr);
+            if (parmStr){
+                  var currtUrl = baseUrl + "?" + parmStr;
+                  window.location.href = currtUrl;
+            }else{
+                 window.location.href = baseUrl;
+            }
+        },
+        changeUrl:function(obj){
             var parmObj = getQueryStringArgs();
             var baseUrl = GetUrl();
             $.extend(parmObj,obj);
@@ -40,7 +57,7 @@ define(['path','layui'],function(path,layui){
                   window.location.href = currtUrl;
             }else{
                  window.location.href = baseUrl;
-            }
+            }            
         },
          fomartTime:function(timestamp){
          	    var date = new Date(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
@@ -70,10 +87,53 @@ define(['path','layui'],function(path,layui){
              return result;
         }
        
-       }
+       },
+     cookie:function(name, value, options) {
+    if (typeof value != 'undefined') { // name and value given, set cookie
+        options = options || {};
+        if (value === null) {
+            value = '';
+            options = $.extend({}, options); // clone object since it's unexpected behavior if the expired property were changed
+            options.expires = -1;
+        }
+        var expires = '';
+        if (options.expires && (typeof options.expires == 'number' || options.expires.toUTCString)) {
+            var date;
+            if (typeof options.expires == 'number') {
+                date = new Date();
+                date.setTime(date.getTime() + (options.expires * 24 * 60 * 60 * 1000));
+            } else {
+                date = options.expires;
+            }
+            expires = '; expires=' + date.toUTCString(); // use expires attribute, max-age is not supported by IE
+        }
+        // NOTE Needed to parenthesize options.path and options.domain
+        // in the following expressions, otherwise they evaluate to undefined
+        // in the packed version for some reason...
+        var path = options.path ? '; path=' + (options.path) : '';
+        var domain = options.domain ? '; domain=' + (options.domain) : '';
+        var secure = options.secure ? '; secure' : '';
+        document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('');
+    } else { // only name given, get cookie
+        var cookieValue = null;
+        if (document.cookie && document.cookie != '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = jQuery.trim(cookies[i]);
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+}       
      }
      return my;
 })
+
 
 function getQueryStringArgs () {
         //取得查询字符串并去掉问号
@@ -96,7 +156,6 @@ function getQueryStringArgs () {
         }
         return args;
     };
-
 
     function windowHref() {
         //获取当前显示文档的完整的URL(字符串)

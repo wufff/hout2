@@ -1,7 +1,7 @@
 define(["layui","path"], function(layui,path) {
 	var layer = layui.layer;
-	var $ = jquery = layui.jquery;
 	var loading;
+	var $ = jQuery = layui.jquery;
 	return {
 		ajaxJSONP:function(url, data, callback) {
 			$.ajax({
@@ -15,14 +15,13 @@ define(["layui","path"], function(layui,path) {
 					callback(json);
 				},
 				error: function(e) {
-					alert("ajaxJSONP error");
+					console.log("ajaxJSONP error");
 				}
 			});
 		},
 
-
 		ajaxPost:function(requestUrl,requestData,SuccessCallback,successPar){
-			  loading = layer.load(5);
+			  // loading = layer.load(5);
 			$.ajax({
 				type: "POST",
 				url: requestUrl,
@@ -38,10 +37,10 @@ define(["layui","path"], function(layui,path) {
 						obj = data;
 					}
 					layer.close(loading);
-					if (obj.type == "success"){
+					if (obj.errcode == 0){
 		                  SuccessCallback(obj,successPar);
 		             }else{
-		                   layer.msg(obj.message,{icon:5});
+		                  layer.msg(obj.msg,{icon:5});
 		            }
 					
 				},
@@ -53,10 +52,8 @@ define(["layui","path"], function(layui,path) {
 				}
 			});
 		},
+
        ajaxGet:function(url,data,SuccessCallback,successPar){
-       	   if(path.is_local) {
-				data.jump = 1;
-			}
        	    $.ajax({
             type: "get",
             url: url,
@@ -66,10 +63,11 @@ define(["layui","path"], function(layui,path) {
             dataType: "json",
             success: function (res)
             {
-                if (res.type == "success"){
+                if (res.errcode == 0){
                 	 SuccessCallback(res,successPar);
                 }else{
-                     layer.msg(res.message,{icon:5});
+                	 
+                     layer.msg(res.msg,{icon:5});
                 }
                 
             },
@@ -82,7 +80,46 @@ define(["layui","path"], function(layui,path) {
                 layer.msg("网络错误，请联系管理员",{time:800});
             }
         });
-       }
+       },
 
+       smsg:function(str){
+            if(str){
+              layer.msg(str);
+            }else{
+               layer.msg("操作成功！");  
+            }
+            setTimeout(function(){
+                  window.location.reload();
+            },400)
+        },
+
+	   getTr:function(obj){
+	             var data = {}
+	             var tr = $(obj).parents("tr");
+	             var tds = tr.find("td");
+	             tds.each(function(index,item){
+	                 var k = $(item).attr("data-k");
+	                 var v = $(item).attr("value");
+	                 if(k){
+	                     if(v){
+	                        data[k] = v;
+	                     }else{
+	                        data[k] = $(item).text();
+	                     }
+	                 }
+	             })
+	             return data;
+	       },
+
+        err:function(str){
+              layer.msg(str,{icon:5});
+        },
+        
+        GetUrl:function (){
+        var sHref = window.location.href;
+        var args = sHref.split('?');
+        return args[0];
+      }        
+       
 	}
 })

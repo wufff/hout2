@@ -13,9 +13,34 @@ require(["layui", "api", "path", "page", "downList", "headLogin_b"], function(la
   var edit_id;
   
   //监听下拉
-  form.on('select(grade)', function(data) {
+form.on('select(goods_id)', function(data) {
      console.log(data.value)
-  })
+})
+
+
+function control(str) {
+            dialog = layer.open({
+                type: 1,
+                title: str,
+                content: $("#control"),
+                area: ["420px", "300px"],
+                btn: ["确定", "取消"],
+                yes: function(res) {
+                    $("#submitControlBt").click();
+                }
+            })
+        }   
+
+      function initContorl(data) {
+          if (data) {
+              form.val("control", data);
+          } else {
+              form.val("control", {
+                  "name": "",
+                  "id": ""
+              })
+          }
+      }  
 
 
 //全选按钮
@@ -62,6 +87,12 @@ require(["layui", "api", "path", "page", "downList", "headLogin_b"], function(la
     })
   })
 
+
+layer.confirm('is not?', {icon: 3, title:'提示'}, function(index){
+  //do something
+  
+  layer.close(index);
+});
 
 // 添加编辑提交
 

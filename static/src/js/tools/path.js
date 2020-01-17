@@ -1,7 +1,7 @@
 define(function(){
      return {
-     	 api:"",
-         localhostImg:"/mySpace/img",
-         static:"http://images.dev.dodoedu.com/rjsPage/frontend/base/global/images",
+     	 upLoad:"/upload",
+     	 static:"http://question.images.dev.dodoedu.com",
+     	 img:"http://wufff.question_images.dev.dodoedu.com/static/src/img/"
      }
 })
