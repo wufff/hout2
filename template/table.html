@@ -1,453 +1,485 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-        <title>index</title>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-       <!--  <link rel="stylesheet" type="text/css" href="/hout2/static/src/css/bace.css"> -->
-        <link rel="stylesheet" type="text/css" href="/hout2/static/src/js/lib/layui/css/layui.css">
-        <link rel="stylesheet" type="text/css" href="/hout2/static/src/css/public.css">
-        <link rel="stylesheet" type="text/css" href="/hout2/static/src/css/manage.css">
-        <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body>
-    <!--[if lt IE 10]>
-            <script src="http://wufff.question_images.dev.dodoedu.com/static/src/js/tools/ie_update.js"></script>
-    <![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+  <title>index</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <!--  <link rel="stylesheet" type="text/css" href="/hout2/static/src/css/bace.css"> -->
+  <link rel="stylesheet" type="text/css" href="/hout2/static/src/js/lib/layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="/hout2/static/src/css/public.css">
+  <link rel="stylesheet" type="text/css" href="/hout2/static/src/css/manage.css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<!--[if lt IE 10]>
+<script src="http://wufff.question_images.dev.dodoedu.com/static/src/js/tools/ie_update.js"></script>
+<![endif]-->
 <div id="header_m">
-    <div class="pull-left leftroom">
-        <i class="fa fa-bars" style="visibility: hidden;"></i>
-    </div>
-    <div class="pull-left">
-        <a href="#" class="logo">
-            中国问题研究文献出版目录及服务平台后台管理
-        </a>
-    </div>
-    <span class="author">
+  <div class="pull-left leftroom">
+    <i class="fa fa-bars" style="visibility: hidden;"></i>
+  </div>
+  <div class="pull-left">
+    <a href="#" class="logo">
+      中国问题研究文献出版目录及服务平台后台管理
+    </a>
+  </div>
+  <span class="author">
         <a href="/index/logOut"><span>退出</span></a>
     </span>
 </div>
 
-   
-<div class="clearfix mianWrap" >
-    <div class="article_nav pull-left">
-        <div class="author_left">
-           <img src="http://images.dev.dodoedu.com/resize/34x34/attachments/87959cef79c0865f.jpg" alt="">
-             <span>test02</span>
-        </div>
 
-     <div class="nav_content" id="article_nav">
-        <div class="inner">
-                <div class="model active">
-                    <div class="title">
-                        <i class="fa fa-home" aria-hidden="true"></i>
-                        主页
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                    </div>
-                     <ul>
-                        <li class="active">
-                            <a href="page.html">表格</a>
-                        </li>
-                        <li class="">
-                            <a href="form.html">表单</a>
-                        </li>
-                        <li class="">
-                            <a href="dialog.html">弹窗</a>
-                        </li>
-                        <li class="">
-                            <a href="input.html">输入</a>
-                        </li>
-                    </ul>                     
-                 </div>
-                <div class="model">
-                    <div class="title">
-                        <i class="fa fa-bars"></i>
-                        分类管理
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                    </div>
-                    <ul>
-                        <li class="">
-                            <a href="/manage/classifyList">分类管理</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="model">
-                    <div class="title">
-                        <i class="fa fa-tags"></i>
-                        产品管理
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                    </div>
-                    <ul>
-                        <li class="">
-                            <a href="/manage/goodsexamine?left_menu=7&head_user=0">产品审核</a>
-                        </li>
-                        <li class="">
-                            <a href="/manage/goodsrelease?left_menu=8">产品发布</a>
-                        </li>
-                    </ul>
-                </div>
-                 <div class="model">
-                    <div class="title">
-                        <i class="fa fa-book"></i>
-                        内容管理
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                    </div>
-                    <ul>
-                        <li class="">
-                            <a href="/manage/goodsList?origin=sync">内容同步</a>
-                        </li>
-                        <li class="">
-                            <a href="/manage/goodsList?origin=verify">内容审核</a>
-                        </li>
-                        <li class="">
-                            <a href="/manage/goodsList?origin=modify">内容列表</a>
-                        </li>
-                        <li class="">
-                            <a href="/manage/authorList?origin=modify">作者列表</a>
-                        </li>
-                    </ul>
-                   </div>
-                    <div class="model">
-                        <div class="title">
-                            <i class="fa fa-user-circle" aria-hidden="true"></i>
-                            账户管理
-                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                        </div>
-                        <ul>
-                            <li class="">
-                                <a href="/manage/user">个人用户</a>
-                            </li>
-                            <li class="">
-                                <a href="/manage/orguser">机构用户</a>
-                            </li>
-                            <li class="">
-                                <a href="/manage/adminuser">管理用户</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="model">
-                        <div class="title">
-                            <i class="fa fa-file" aria-hidden="true"></i>
-                            订单管理
-                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                        </div>
-                        <ul>
-                            <li class="">
-                                <a href="/manage/paylist">充值记录</a>
-                            </li>
-                            <li class="">
-                                <a href="/manage/exchangelist">兑换记录</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="model">
-                        <div class="title">
-                            <i class="fa fa-file" aria-hidden="true"></i>
-                            日志管理
-                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                        </div>
-                        <ul>
-                            <li class="">
-                                <a href="/manage/goodslog">产品日志</a>
-                            </li>
-                            <li class="">
-                                <a href="/manage/syslog">操作日志</a>
-                            </li>
-                        </ul>
-                    </div>        
-              </div>
-         </div>
+<div class="clearfix mianWrap">
+  <div class="article_nav pull-left">
+    <div class="author_left">
+      <img src="http://images.dev.dodoedu.com/resize/34x34/attachments/87959cef79c0865f.jpg" alt="">
+      <span>test02</span>
     </div>
 
-     <!-- 主要内容开始 -->
-    <div id="content">
-           <!--  全局搜索 -->
-            <!-- 用户信息 -->      
-            <div class="content_author">
-                <div class="pull-left editeAwrap">
-                     <div class="editeA">
-                        <img src="http://images.dev.dodoedu.com/resize/34x34/attachments/87959cef79c0865f.jpg" id="headImgbt_img" alt="" class="pull-left">
-                        <div class="pull-left">
-                            <div class="people" style="margin-bottom: 3px;">test02</div>
-                            <div class="people_s" style="margin-bottom: 3px;">超级管理员</div>
-                            <div class="people_d" id="headImgbt" style="color:#1E9FFF;font-size:12px;cursor: pointer;">更换头像</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pull-right help">
-                    <a href="">使用帮助</a>
-                </div>
-            </div>    
-            <div class="content_tab">
-                <a href="" class="active">创建产品</a>
-                <a href="">产品审核</a>
-                <a href="">产品发布</a>
-            </div>            
-            <div class="content_main spot" >
-                                                <form class="filter-g layui-form">
-                                                  <div class="clearfix">
-                                                     <dl>
-                                                        <dt>
-                                                            分类：
-                                                        </dt>
-                                                        <dd class="md-w">
-                                                            <select name="" id="">
-                                                                <option value="">132</option>
-                                                                <option value="">132</option>
-                                                                <option value="">132</option>
-                                                            </select>
-                                                        </dd>
-                                                     </dl>
-                                                      <dl>
-                                                        <dt>
-                                                            分类二：
-                                                        </dt>
-                                                        <dd class="lg-w">
-                                                            <select name="" id="">
-                                                                <option value="">132</option>
-                                                                <option value="">132</option>
-                                                                <option value="">132</option>
-                                                            </select>
-                                                        </dd>
-                                                      </dl>
-                                                       <dl>
-                                                            <dt>
-                                                                分类三的选项：
-                                                            </dt>
-                                                            <dd class="sm-w">
-                                                                    <select name="" id="">
-                                                                        <option value="">正常</option>
-                                                                        <option value="">禁用</option>
-                                                                        <option value="">未审核</option>
-                                                                    </select>
-                                                            </dd>
-                                                        </dl> 
-                                                        <dl>
-                                                            <dt>
-                                                                分类四：
-                                                            </dt>
-                                                            <dd class="lg">
-                                                                 <input type="text" class="layui-input" placeholder="分类四">
-                                                            </dd>
-                                                            <dt class="bt">
-                                                                <button class="layui-btn layui-btn-primary">查询</button>
-                                                            </dt>
-                                                             <dt class="bt">
-                                                                <a class="layui-btn layui-btn-normal">新增</a>
-                                                            </dt>                                                                
-                                                        </dl>                                                           
-                                                     </div>                                                                                 
-                                                </from>
-                                                <div class="table_b">
-                                                       <table class="layui-table">
-                                                        <thead>
-                                                            <tr>
-                                                                <th style="width: 44px;">序号</th>
-                                                                <th style="width: 180px;">提问时间</th>
-                                                                <th style="min-width: 200px;">问题内容</th>
-                                                                <th style="width: 80px;">图片</th>
-                                                                <th style="width: 60px;">学科</th>
-                                                                <th style="width: 90px;">年级</th>
-                                                                <th>用户</th>
-                                                                <th style="width: 120px;">费用</th>
-                                                                <th style="width: 120px;">状态</th>
-                                                                <th style="width: 110px;">答疑用户</th>
-                                                                <th style="width: 170px;">答疑时间</th>
-                                                                <th style="width: 160px;">操作</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>1</td>
-                                                                <td>2020-01-07 15:00:07</td>
-                                                                <td>0107测试这道题怎么做？0107测试这道题怎么做？0107测试这道题怎么做？0107测试这道题怎么做？</td>
-                                                                <td>
-                                                                    <a class="look" href="http://images.dev.dodoedu.com//wxt2019/4295e142c767d660.JPEG">
-                                                                     <img src="http://images.dev.dodoedu.com//wxt2019/4295e142c767d660.JPEG" alt="">
-                                                                    </a>
-                                                                </td>
-                                                                <td>英语</td>
-                                                                <td>五年级</td>
-                                                                <td>13530240063</td>
-                                                                <td>0.01</td>
-                                                                <td>未回答</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td>
-                                                                    <a href="javascript:void(0);" question_id="116" refund_reason="0" order_id="20200107157838041451382021" class="refund">退回</a>
-                                                                    <a href="/Admin/Answer/addAnswer?question_id=116" class="edit">去回答</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2</td>
-                                                                <td>2020-01-03 09:08:09</td>
-                                                                <td>利率</td>
-                                                                <td>
-                                                                </td>
-                                                                <td>语文</td>
-                                                                <td>九年级</td>
-                                                                <td>13554682506</td>
-                                                                <td>会员免费</td>
-                                                                <td>订单超时</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td>
-                                                                    <a href="/Admin/Question/questionInfo?question_id=114" class="edit">查看</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>3</td>
-                                                                <td>2020-01-03 09:07:57</td>
-                                                                <td>爸爸</td>
-                                                                <td>
-                                                                </td>
-                                                                <td>语文</td>
-                                                                <td>九年级</td>
-                                                                <td>13554682506</td>
-                                                                <td>会员免费</td>
-                                                                <td>订单超时</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td>
-                                                                    <a href="/Admin/Question/questionInfo?question_id=113" class="edit">查看</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>4</td>
-                                                                <td>2020-01-02 16:56:57</td>
-                                                                <td>测</td>
-                                                                <td>
-                                                                </td>
-                                                                <td>语文</td>
-                                                                <td>九年级</td>
-                                                                <td>13554682506</td>
-                                                                <td>会员免费</td>
-                                                                <td>订单超时</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td>
-                                                                    <a href="/Admin/Question/questionInfo?question_id=112" class="edit">查看</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>5</td>
-                                                                <td>2020-01-01 09:00:00</td>
-                                                                <td>测试支付</td>
-                                                                <td>
-                                                                </td>
-                                                                <td>语文</td>
-                                                                <td>九年级</td>
-                                                                <td>13554682506</td>
-                                                                <td>0.01</td>
-                                                                <td>已退回</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td>
-                                                                    <a href="/Admin/Question/getRefundReason?question_id=115" class="edit">查看</a>&nbsp;&nbsp;&nbsp;
-                                                                    <a href="javascript:void(0);" class="edit_refund" refund_reason_id="0" refund_reason_content="">编辑</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>6</td>
-                                                                <td>2019-12-31 14:30:37</td>
-                                                                <td>这道题怎么做？</td>
-                                                                <td>
-                                                                    <a class="look" data-img="http://images.dev.dodoedu.com//wxt2019/8115e0aeb0cd15b7.JPEG">查看</a>
-                                                                </td>
-                                                                <td>语文</td>
-                                                                <td>五年级</td>
-                                                                <td>13530240063</td>
-                                                                <td>0.01</td>
-                                                                <td>已退回</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td>
-                                                                    <a href="/Admin/Question/getRefundReason?question_id=109" class="edit">查看</a>&nbsp;&nbsp;&nbsp;
-                                                                    <a href="javascript:void(0);" class="edit_refund" refund_reason_id="0" refund_reason_content="">编辑</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>7</td>
-                                                                <td>2019-12-30 17:17:56</td>
-                                                                <td>测试iOS</td>
-                                                                <td>
-                                                                    <a class="look" data-img="http://images.dev.dodoedu.com//wxt2019/4975e09c0c4c20d5.jpg">查看</a>
-                                                                </td>
-                                                                <td>英语</td>
-                                                                <td>八年级</td>
-                                                                <td>13530240063</td>
-                                                                <td>会员免费</td>
-                                                                <td>已回答</td>
-                                                                <td>system</td>
-                                                                <td>2019-12-31 09:32:00</td>
-                                                                <td>
-                                                                    <a href="/Admin/Answer/answerInfo?answer_id=9" class="edit">查看</a>&nbsp;&nbsp;&nbsp;
-                                                                    <a href="/Admin/Answer/editAnswer?answer_id=9" class="edit">编辑</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>8</td>
-                                                                <td>2019-12-30 17:07:55</td>
-                                                                <td>call 我</td>
-                                                                <td>
-                                                                </td>
-                                                                <td>英语</td>
-                                                                <td>二年级</td>
-                                                                <td>13530240063</td>
-                                                                <td>0.01</td>
-                                                                <td>订单超时</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td>
-                                                                    <a href="/Admin/Question/questionInfo?question_id=107" class="edit">查看</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>9</td>
-                                                                <td>2019-12-30 17:06:26</td>
-                                                                <td>你的</td>
-                                                                <td>
-                                                                </td>
-                                                                <td>语文</td>
-                                                                <td>二年级</td>
-                                                                <td>13530240063</td>
-                                                                <td>0.01</td>
-                                                                <td>订单超时</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td>
-                                                                    <a href="/Admin/Question/questionInfo?question_id=106" class="edit">查看</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td colspan="12" class="noneData">
-                                                                  暂无数据
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
+    <div class="nav_content" id="article_nav">
+      <div class="inner">
+        <div class="model active">
+          <div class="title">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            主页
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </div>
+          <ul>
+            <li class="active">
+              <a href="page.html">表格</a>
+            </li>
+            <li class="">
+              <a href="form.html">表单</a>
+            </li>
+            <li class="">
+              <a href="dialog.html">弹窗</a>
+            </li>
+            <li class="">
+              <a href="input.html">输入</a>
+            </li>
+          </ul>
+        </div>
+        <div class="model">
+          <div class="title">
+            <i class="fa fa-bars"></i>
+            分类管理
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </div>
+          <ul>
+            <li class="">
+              <a href="/manage/classifyList">分类管理</a>
+            </li>
+          </ul>
+        </div>
+        <div class="model">
+          <div class="title">
+            <i class="fa fa-tags"></i>
+            产品管理
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </div>
+          <ul>
+            <li class="">
+              <a href="/manage/goodsexamine?left_menu=7&head_user=0">产品审核</a>
+            </li>
+            <li class="">
+              <a href="/manage/goodsrelease?left_menu=8">产品发布</a>
+            </li>
+          </ul>
+        </div>
+        <div class="model">
+          <div class="title">
+            <i class="fa fa-book"></i>
+            内容管理
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </div>
+          <ul>
+            <li class="">
+              <a href="/manage/goodsList?origin=sync">内容同步</a>
+            </li>
+            <li class="">
+              <a href="/manage/goodsList?origin=verify">内容审核</a>
+            </li>
+            <li class="">
+              <a href="/manage/goodsList?origin=modify">内容列表</a>
+            </li>
+            <li class="">
+              <a href="/manage/authorList?origin=modify">作者列表</a>
+            </li>
+          </ul>
+        </div>
+        <div class="model">
+          <div class="title">
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+            账户管理
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </div>
+          <ul>
+            <li class="">
+              <a href="/manage/user">个人用户</a>
+            </li>
+            <li class="">
+              <a href="/manage/orguser">机构用户</a>
+            </li>
+            <li class="">
+              <a href="/manage/adminuser">管理用户</a>
+            </li>
+          </ul>
+        </div>
+        <div class="model">
+          <div class="title">
+            <i class="fa fa-file" aria-hidden="true"></i>
+            订单管理
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </div>
+          <ul>
+            <li class="">
+              <a href="/manage/paylist">充值记录</a>
+            </li>
+            <li class="">
+              <a href="/manage/exchangelist">兑换记录</a>
+            </li>
+          </ul>
+        </div>
+        <div class="model">
+          <div class="title">
+            <i class="fa fa-file" aria-hidden="true"></i>
+            日志管理
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </div>
+          <ul>
+            <li class="">
+              <a href="">产品日志</a>
+            </li>
+            <li class="">
+              <a href="">操作日志</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主要内容开始 -->
+  <div id="content">
+    <!--  全局搜索 -->
+    <!-- 用户信息 -->
+    <div class="content_author">
+      <div class="pull-left editeAwrap">
+        <div class="editeA">
+          <img src="http://images.dev.dodoedu.com/resize/34x34/attachments/87959cef79c0865f.jpg" id="headImgbt_img"
+               alt="" class="pull-left">
+          <div class="pull-left">
+            <div class="people" style="margin-bottom: 3px;">test02</div>
+            <div class="people_s" style="margin-bottom: 3px;">超级管理员</div>
+            <div class="people_d" id="headImgbt" style="color:#1E9FFF;font-size:12px;cursor: pointer;">更换头像</div>
+          </div>
+        </div>
+      </div>
+      <div class="pull-right help">
+        <a href="">使用帮助</a>
+      </div>
+    </div>
+    <div class="content_tab">
+      <a href="" class="active">创建产品</a>
+      <a href="">产品审核</a>
+      <a href="">产品发布</a>
+    </div>
+    <div class="content_main spot">
+      <form class="filter-g layui-form">
+        <div class="clearfix">
+          <dl>
+            <dt>
+              分类：
+            </dt>
+            <dd class="md-w">
+              <select name="">
+                <option value="">132</option>
+                <option value="">132</option>
+                <option value="">132</option>
+              </select>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              分类二：
+            </dt>
+            <dd class="lg-w">
+              <select name="">
+                <option value="">132</option>
+                <option value="">132</option>
+                <option value="">132</option>
+              </select>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              分类三的选项：
+            </dt>
+            <dd class="sm-w">
+              <select name="" id="">
+                <option value="">正常</option>
+                <option value="">禁用</option>
+                <option value="">未审核</option>
+              </select>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              分类四：
+            </dt>
+            <dd class="lg">
+              <input type="text" class="layui-input" placeholder="分类四">
+            </dd>
+            <dt class="bt">
+              <button class="layui-btn layui-btn-primary">查询</button>
+            </dt>
+            <dt class="bt">
+              <a class="layui-btn layui-btn-normal">新增</a>
+            </dt>
+          </dl>
+        </div>
+        </form>
+        <div class="table_b">
+          <table class="layui-table">
+            <thead>
+            <tr>
+              <th style="width: 44px;">序号</th>
+              <th style="width: 180px;">提问时间</th>
+              <th style="min-width: 200px;">问题内容</th>
+              <th style="width: 80px;">图片</th>
+              <th style="width: 60px;">学科</th>
+              <th style="width: 90px;">年级</th>
+              <th>用户</th>
+              <th style="width: 120px;">费用</th>
+              <th style="width: 120px;">状态</th>
+              <th style="width: 110px;">答疑用户</th>
+              <th style="width: 170px;">答疑时间</th>
+              <th style="width: 160px;">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>1</td>
+              <td>2020-01-07 15:00:07</td>
+              <td>0107测试这道题怎么做？0107测试这道题怎么做？0107测试这道题怎么做？0107测试这道题怎么做？</td>
+              <td>
+                <a class="look" href="http://images.dev.dodoedu.com//wxt2019/4295e142c767d660.JPEG">
+                  <img src="http://images.dev.dodoedu.com//wxt2019/4295e142c767d660.JPEG" alt="">
+                </a>
+              </td>
+              <td>英语</td>
+              <td>五年级</td>
+              <td>13530240063</td>
+              <td>0.01</td>
+              <td>未回答</td>
+              <td></td>
+              <td></td>
+              <td>
+                <a href="javascript:void(0);" question_id="116" refund_reason="0" order_id="20200107157838041451382021"
+                   class="refund">退回</a>
+                <a href="/Admin/Answer/addAnswer?question_id=116" class="edit">去回答</a>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>2020-01-03 09:08:09</td>
+              <td>利率</td>
+              <td>
+              </td>
+              <td>语文</td>
+              <td>九年级</td>
+              <td>13554682506</td>
+              <td>会员免费</td>
+              <td>订单超时</td>
+              <td></td>
+              <td></td>
+              <td>
+                <a href="/Admin/Question/questionInfo?question_id=114" class="edit">查看</a>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>2020-01-03 09:07:57</td>
+              <td>爸爸</td>
+              <td>
+              </td>
+              <td>语文</td>
+              <td>九年级</td>
+              <td>13554682506</td>
+              <td>会员免费</td>
+              <td>订单超时</td>
+              <td></td>
+              <td></td>
+              <td>
+                <a href="/Admin/Question/questionInfo?question_id=113" class="edit">查看</a>
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>2020-01-02 16:56:57</td>
+              <td>测</td>
+              <td>
+              </td>
+              <td>语文</td>
+              <td>九年级</td>
+              <td>13554682506</td>
+              <td>会员免费</td>
+              <td>订单超时</td>
+              <td></td>
+              <td></td>
+              <td>
+                <a href="/Admin/Question/questionInfo?question_id=112" class="edit">查看</a>
+              </td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>2020-01-01 09:00:00</td>
+              <td>测试支付</td>
+              <td>
+              </td>
+              <td>语文</td>
+              <td>九年级</td>
+              <td>13554682506</td>
+              <td>0.01</td>
+              <td>已退回</td>
+              <td></td>
+              <td></td>
+              <td>
+                <a href="/Admin/Question/getRefundReason?question_id=115" class="edit">查看</a>&nbsp;&nbsp;&nbsp;
+                <a href="javascript:void(0);" class="edit_refund" refund_reason_id="0" refund_reason_content="">编辑</a>
+              </td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>2019-12-31 14:30:37</td>
+              <td>这道题怎么做？</td>
+              <td>
+                <a class="look" data-img="http://images.dev.dodoedu.com//wxt2019/8115e0aeb0cd15b7.JPEG">查看</a>
+              </td>
+              <td>语文</td>
+              <td>五年级</td>
+              <td>13530240063</td>
+              <td>0.01</td>
+              <td>已退回</td>
+              <td></td>
+              <td></td>
+              <td>
+                <a href="/Admin/Question/getRefundReason?question_id=109" class="edit">查看</a>&nbsp;&nbsp;&nbsp;
+                <a href="javascript:void(0);" class="edit_refund" refund_reason_id="0" refund_reason_content="">编辑</a>
+              </td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>2019-12-30 17:17:56</td>
+              <td>测试iOS</td>
+              <td>
+                <a class="look" data-img="http://images.dev.dodoedu.com//wxt2019/4975e09c0c4c20d5.jpg">查看</a>
+              </td>
+              <td>英语</td>
+              <td>八年级</td>
+              <td>13530240063</td>
+              <td>会员免费</td>
+              <td>已回答</td>
+              <td>system</td>
+              <td>2019-12-31 09:32:00</td>
+              <td>
+                <a href="/Admin/Answer/answerInfo?answer_id=9" class="edit">查看</a>&nbsp;&nbsp;&nbsp;
+                <a href="/Admin/Answer/editAnswer?answer_id=9" class="edit">编辑</a>
+              </td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>2019-12-30 17:07:55</td>
+              <td>call 我</td>
+              <td>
+              </td>
+              <td>英语</td>
+              <td>二年级</td>
+              <td>13530240063</td>
+              <td>0.01</td>
+              <td>订单超时</td>
+              <td></td>
+              <td></td>
+              <td>
+                <a href="/Admin/Question/questionInfo?question_id=107" class="edit">查看</a>
+              </td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>2019-12-30 17:06:26</td>
+              <td>你的</td>
+              <td>
+              </td>
+              <td>语文</td>
+              <td>二年级</td>
+              <td>13530240063</td>
+              <td>0.01</td>
+              <td>订单超时</td>
+              <td></td>
+              <td></td>
+              <td>
+                <a href="/Admin/Question/questionInfo?question_id=106" class="edit">查看</a>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="12" class="noneData">
+                暂无数据
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="clearfix">
+          <style type="text/css">.pages {
+            float: right;
+            font-size: 12px;
+            clear: both;
+          }
+
+          .pages * {
+            border: 1px solid #E6E7E1;
+            height: 24px;
+            line-height: 24px;
+            padding: 3px 6px;
+            margin: 1px;
+            color: #0099CC;
+          }
+
+          .pages b {
+            background-color: #0099CC;
+            border-color: #0099CC;
+            color: #FFFFFF;
+          }
+
+          .pages a {
+            text-decoration: none;
+          }
+
+          .pages a:hover {
+            border-color: #0099CC;
+          }
+
+          .pn {
+            border-color: #0099CC;
+          }
+          </style>
+          <div class="pages"><b>1</b></div>
+        </div>
+
+    </div>
+  </div>
+</div>
+<!-- 主要内容结束 -->
+</div>
 
 
-                                                <div class="clearfix"> 
-                                                      <style type="text/css">.pages{float:right;font-size:12px;clear:both;} .pages *{border:1px solid #E6E7E1;height:24px;line-height:24px;padding:3px 6px;margin:1px;color:#0099CC;} .pages b{background-color:#0099CC;border-color:#0099CC;color:#FFFFFF;} .pages a {text-decoration:none;} .pages a:hover{border-color:#0099CC;} .pn{border-color:#0099CC;}
-                                                     </style><div class="pages"><b>1</b></div>                    
-                                                </div>
-
-                                       </div>
-                                    </div>
-                            </div>            
-                              <!-- 主要内容结束 -->
-                        </div>
-                                  
-
-                                <script src="/hout2/static/src/js/lib/require.js"></script>
-                                <script type="text/javascript" src="/hout2/static/src/js/tools/re-config.js"></script>
-                                <script type="text/javascript" src="/hout2/static/src/js/index.js"></script>
-                            </body>  
-                        </html>
+<script src="../static/src/js/lib/require.js"></script>
+<script type="text/javascript" src="../static/src/js/tools/re-config.js"></script>
+<script type="text/javascript" src="../static/src/js/index.js"></script>
+</body>
+</html>
 
 
