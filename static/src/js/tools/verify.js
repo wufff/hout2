@@ -1,13 +1,13 @@
 define(['layui'],function(layui){
     var form = layui.form;
-    var $ = jQuery = layui.jquery;
-    form.verify({ //todo
+    var $  = layui.jquery;
+    form.verify({
       num: function(value, item){ //value：表单的值、item：表单的DOM对象
         if(!new RegExp("^[0-9]*[1-9][0-9]*$").test(value)){
           return '请输正整数';
         }
       },
-     ueditor:function(value,item){
+        edit:function(value,item){
         if(value == ""){
           $(item).addClass('border-danger');
           setTimeout(function(){
@@ -16,7 +16,7 @@ define(['layui'],function(layui){
           return '请填写文本框内容';
        }
      },
-     usename: function(value, item){ 
+     user: function(value, item){
         if(value == ""){
           return '用户名不能为空';
         }
@@ -34,11 +34,11 @@ define(['layui'],function(layui){
       phone:function(value,item){
           var mobile = /^(13[0-9]{9})|(18[0-9]{9})|(14[0-9]{9})|(16[0-9]{9})|(17[0-9]{9})|(15[0-9]{9})$/;
           var length = value.length;
-          if( !mobile.test(value) || length != 11){
+          if( !mobile.test(value) || length !== 11){
               return "请输入正确的手机号"
           }
       },
-      upfile:function(value,item){
+      upFile:function(value,item){
          if(value == ""){ 
             $(item).parents('.upBtn_class').find(".layui-btn").addClass('border-danger');
             return "请上传文件"
@@ -50,16 +50,16 @@ define(['layui'],function(layui){
             return "请完成下拉多选"
          }
       }      
-    });     
+    });
 
-   var me = {
-      phone:function(value){
-          var mobile = /^(13[0-9]{9})|(18[0-9]{9})|(14[0-9]{9})|(16[0-9]{9})|(17[0-9]{9})|(15[0-9]{9})$/;
-          var length = value.length;
-          return mobile.test(value) || length == 11;
-      }  
-   }
-    return me;
+
+    return {
+        phone: function (value) {
+            var mobile = /^(13[0-9]{9})|(18[0-9]{9})|(14[0-9]{9})|(16[0-9]{9})|(17[0-9]{9})|(15[0-9]{9})$/;
+            var length = value.length;
+            return mobile.test(value) || length == 11;
+        }
+    };
 });
  // var reg=/^([1-9]\d*|[0]{1,1})$/ 包含0的1到9
 

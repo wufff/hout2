@@ -4,15 +4,14 @@
 .clearfix:before, .clearfix:after{content: " ";display: table;}
 .clearfix:after{clear: both;}
 html,body {height: 100%;}
-body, button, input, select, textarea {font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;} /*淘宝字体*/
+/*body, button, input, select, textarea {font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;} !*淘宝字体*!*/
 ul { list-style: none; padding: 0} a:hover { text-decoration: none; }
 .container { width:1200px;margin: 0 auto;position: relative; }
 .pull-left{float: left;} .pull-right{ float: right; }
 .clearfix:after{content: "";display: block;height: 0;clear:both;visibility: hidden; }
 
 
-
-.wihte-color {color:transparent !important;}
+.white-color {color:transparent !important;}
 .red {color:red !important;}
 .white {color:#fff !important;}
 .border-danger { border:1px solid red !important; }
@@ -36,31 +35,32 @@ body .layui-laydate .layui-this {background-color:#1E9FFF !important;color: #fff
 .show-img a {position: absolute;width: 40px;height: 40px;right: -40px; top: -40px;background: url("../img/index-close.png") -10px -10px no-repeat;}
 .show-img a:hover {background-position: -10px -78px}
 .show-img {position: fixed; width: 200px;height: 100px;left: 50%;top: 50%; margin: -50px 0 0 -100px;background: #000;z-index: 99999999999;text-align: center}
-.imgbox {text-align: center}
+.imgBox {text-align: center}
 
 /*上传图片*/
 .upImg_box {width: 180px;height: 132px;background: #fafafa;overflow: hidden;text-align: center;}
 .upImg_box  .info { line-height: 30px; }
 .upBtn_class > a{margin-bottom: 10px;}
 .upImg_box img{ max-height: 110px;max-width: 180px; }
+
 /*table_b*/
 .table_b .layui-table td, .table_b .layui-table th {padding: 9px 3px; overflow: hidden;box-sizing: border-box; text-align: center;}
-.spanlist {font-size: 20px;float: right;height: 100%;margin-right: -3px;cursor: pointer;}
-.spancontent{width: 122px;overflow: hidden;height: 23px;position: relative;}
+.spanList {font-size: 20px;float: right;height: 100%;margin-right: -3px;cursor: pointer;}
+.spanContent{width: 122px;overflow: hidden;height: 23px;position: relative;}
 .table_b .layui-table thead tr th, .table_b .layui-table tbody tr td { text-align: center; }
 .table_b .layui-table td, .table_b .layui-table th { padding: 9px 3px;}
 .table_b .layui-table tbody tr:hover {background-color: transparent;}
-.table_b .layui-table tr { transition:none;-webkit-transition: :none;}
+.table_b .layui-table tr { transition:none;-webkit-transition:none;}
 .table_b tr a {color: #1E9FFF;cursor:pointer;margin: 0 2px;}
 .table_b img { max-width: 100px; max-height:60px;}
 .table_b .noneData { padding:20px 0 !important; }
-.table_b .layui-table { margin:0; }
+.table_b .layui-table { margin:0;}
 
 /*filter-g*/
 .filter-g > div > dl {float: left; margin-bottom: 20px;}
 .filter-g  > div > dl > dt {float: left;margin-right: 10px;padding-top: 10px;}
 .filter-g  > div > dl > dd { float: left; margin-right: 20px;}
-.filter-g  > div > dl > dt.bt{padding-top: 0px;font-weight: normal; margin-right: 10px;}
+.filter-g  > div > dl > dt.bt{padding-top: 0;font-weight: normal; margin-right: 10px;}
 
 
 /*.filter-g {  }
@@ -85,7 +85,7 @@ body .layui-laydate .layui-this {background-color:#1E9FFF !important;color: #fff
 .select-main { visibility: hidden;width: 460px;overflow: hidden;position: absolute;box-sizing: border-box;z-index: 99;}
 .select-main.list-box {width: 460px;height: 190px;}
 .list-box .list-scroll {width: 150px;float: left; height: 183px; background: #fff;border-bottom: 1px solid #ddd;border-top:1px solid #ddd;}
-#list-scroll, #list-scroll1 ,#list-scroll2{box-shadow: 1px 0px 3px rgba(0,0,0,.1) }
+#list-scroll, #list-scroll1 ,#list-scroll2{box-shadow: 1px 0 3px rgba(0,0,0,.1) }
 #list-scroll1,  #list-scroll{border-right: 1px solid #f2f2f2;}
 .list-box .list-scroll .scroll-item {height: 36px;line-height: 36px; cursor: pointer;text-align: center;
 	overflow: hidden; 
@@ -98,7 +98,7 @@ body .layui-laydate .layui-this {background-color:#1E9FFF !important;color: #fff
 .list-box .list-scroll .list-item:hover {background: #e6e6e6;}
 
 /*tags*/
-.tags-g .tagsbox {width:100%;height: 100px;overflow-y:auto; border:1px solid #e6e6e6;padding: 5px;border-bottom: none; }
+.tags-g .tagsBox {width:100%;height: 100px;overflow-y:auto; border:1px solid #e6e6e6;padding: 5px;border-bottom: none; }
 .tags-g .tag { background: #5a8bff;color:#fff;padding: 2px 5px;margin-right: 5px;float: left;margin-bottom: 5px;}
 .tags-g  .tag .del_tag { margin-left: 5px; cursor: pointer; float: right;height: 100%;font-weight: bold;font-size: 16px;position: relative;top:2px;}
  body .tags-g .layui-form-select dl dd.layui-this { background-color: transparent;color: #1a1a1a; }
@@ -110,22 +110,20 @@ body .layui-laydate .layui-this {background-color:#1E9FFF !important;color: #fff
 .control-g  > dl > dd.text { padding-top: 10px; }
 
 /*多图看*/
- #lookMark { background-color: #ddd;height: 100%;width: 100%;background-color: #000;}
- #lookMark .mian { width: 420px;height: 650px;margin: 0 auto;background-color: #000;}
- #lookMark .imgbox {background-size: contain;background-repeat: no-repeat;width: 100%;height: 100%;background-position: center center;}
+ #lookMark {height: 100%;width: 100%;background-color: #000;}
+ #lookMark .main { width: 420px;height: 650px;margin: 0 auto;background-color: #000;}
+ #lookMark .imgBox {background-size: contain;background-repeat: no-repeat;width: 100%;height: 100%;background-position: center center;}
  #lookMark .bar { position: absolute;top: 240px;cursor: pointer; color:#c2c2c2; font-size: 60px;}
  #lookMark .bar.left_bar {left:5px;}
  #lookMark .bar.right_bar {right: 5px;}
  #lookMark #mainImg { width: 100%;height: 100%;}
  #lookMark .page {position: absolute;top:24px;color:#fff;font-size: 20px;left: 48%}
- #lookMark .rechore {position: absolute;bottom: 40px;cursor: pointer;left:50%;font-size: 30px;color: #fff; }
+ #lookMark .rotate {position: absolute;bottom: 40px;cursor: pointer;left:50%;font-size: 30px;color: #fff; }
  #lookMark .role { transform:rotate(90deg); -webkit-transform:rotate(90deg); }
-
-
 
 /*=form========================*/
 body  .layui-form-select dl dd.layui-this {
-	background-color: #1E9FFF ;
+	background-color: #1E9FFF;
     color: #fff;
 }
 

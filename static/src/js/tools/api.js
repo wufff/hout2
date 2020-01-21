@@ -1,7 +1,7 @@
 define(["layui","path"], function(layui,path) {
 	var layer = layui.layer;
 	var loading;
-	var $ = jQuery = layui.jquery;
+	var $  = layui.jquery;
 	return {
 		ajaxJSONP:function(url, data, callback) {
 			$.ajax({
@@ -37,7 +37,7 @@ define(["layui","path"], function(layui,path) {
 						obj = data;
 					}
 					layer.close(loading);
-					if (obj.errcode == 0){
+					if (obj.errcode === 0){
 		                  SuccessCallback(obj,successPar);
 		             }else{
 		                  layer.msg(obj.msg,{icon:5});
