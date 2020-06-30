@@ -1,6 +1,7 @@
 define(["layui"],function(layui){
-  var $ = jQuery = layui.jquery;
+  var $  = layui.jquery;
   var form = layui.form;
+
   var me = {
   	  select:function(){
   	  	 form.on('select(tag)', function(data){
@@ -17,18 +18,19 @@ define(["layui"],function(layui){
   	  },
   	  del:function(){
   	  	 $("body").on("click",".del_tag",function(){
-              var value = $(this).parents().attr("value");
+              var value = $(this).parents().attr("data-value");
               var tags_g = $(this).parents(".tags-g");
-              var options =  tagsWrap.find("option");
+              var options =  tags_g.find("option");
+              console.log(value);
               options.each(function(i,ele){
                    console.log($(ele).attr("value"));
                  if($(ele).attr("value") === value){
                     $(ele).attr("disabled",false);
-                    form.render();  
                  }
               });
-  	  	 	    $(this).parent().remove(); 
-              me.reshData(tags_g);
+             form.render();
+             $(this).parent().remove();
+             me.reshData(tags_g);
   	  	 })
   	  },
   	  reshData:function(tags_g){
@@ -47,7 +49,7 @@ define(["layui"],function(layui){
          me.del();
   	  },
       initData:function(tags_g,value,data){
-          const tagWrap = tags_g.find(".tagsBox");
+          var tagWrap = tags_g.find(".tagsBox");
           var select =  tags_g.find("select");
           var input =  tags_g.find(".tag_value");
           if(data){

@@ -7,7 +7,7 @@
    removeCombined:false,
    optimize: "uglify2",
    uglify2: {
-       mangle: false,  //false 不混淆变量名
+       mangle: true,  //false 不混淆变量名
        mangleProps:{
            screw_ie8: false, //ie8支持
            keep_quoted:true, //保持引号，不进行混淆

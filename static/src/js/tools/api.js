@@ -1,4 +1,4 @@
-define(["layui","path"], function(layui,path) {
+define(["layui"], function(layui) {
 	var layer = layui.layer;
 	var loading;
 	var $  = layui.jquery;
@@ -63,11 +63,16 @@ define(["layui","path"], function(layui,path) {
             dataType: "json",
             success: function (res)
             {
-                if (res.errcode == 0){
-                	 SuccessCallback(res,successPar);
+				var obj = null;
+				try {
+					obj = eval('(' + data + ')');
+				} catch (ex) {
+					obj = data;
+				}
+                if (obj.errcode == 0){
+                	 SuccessCallback(obj,successPar);
                 }else{
-                	 
-                     layer.msg(res.msg,{icon:5});
+                     layer.msg(obj.msg,{icon:5});
                 }
                 
             },
@@ -75,13 +80,12 @@ define(["layui","path"], function(layui,path) {
             	var obj = { 
                     type:"ajax返回错误",
                     data:res
-            	 }
+            	 };
                 //console.log(obj);
                 layer.msg("网络错误，请联系管理员",{time:800});
             }
         });
        },
-
        smsg:function(str){
             if(str){
               layer.msg(str);
@@ -92,34 +96,8 @@ define(["layui","path"], function(layui,path) {
                   window.location.reload();
             },400)
         },
-
-	   getTr:function(obj){
-	             var data = {}
-	             var tr = $(obj).parents("tr");
-	             var tds = tr.find("td");
-	             tds.each(function(index,item){
-	                 var k = $(item).attr("data-k");
-	                 var v = $(item).attr("value");
-	                 if(k){
-	                     if(v){
-	                        data[k] = v;
-	                     }else{
-	                        data[k] = $(item).text();
-	                     }
-	                 }
-	             })
-	             return data;
-	       },
-
         err:function(str){
               layer.msg(str,{icon:5});
-        },
-        
-        GetUrl:function (){
-        var sHref = window.location.href;
-        var args = sHref.split('?');
-        return args[0];
-      }        
-       
+        }
 	}
 })

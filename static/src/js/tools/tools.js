@@ -148,7 +148,7 @@ function getQueryStringArgs () {
         for (var i = 0; i < len; i++) {
             item = items[i].split("=");
             //参数解码
-            name = decodeURIComponent(item[0])
+            var name = decodeURIComponent(item[0]);
             value = decodeURIComponent(item[1]);
             if (name.length) {
                 args[name] = value;
