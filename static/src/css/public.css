@@ -1,3 +1,24 @@
+/*base*/
+.clearfix:before,
+.clearfix:after,
+.dl-horizontal dd:before,
+.dl-horizontal dd:after,
+.form-horizontal .form-group:before,
+.form-horizontal .form-group:after,
+.btn-toolbar:before,
+.btn-toolbar:after,
+.btn-group-vertical > .btn-group:before,
+.btn-group-vertical > .btn-group:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after,
+.dl-horizontal dd:after,
+.form-horizontal .form-group:after,
+.btn-toolbar:after,
+.btn-group-vertical > .btn-group:after {
+    clear: both;
+}
 /*=reset========================*/
 * {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 *:before, *:after { -webkit-box-sizing: border-box;-moz-box-sizing: border-box; box-sizing: border-box;}
@@ -64,7 +85,6 @@ body .layui-laydate .layui-this {background-color:#1E9FFF !important;color: #fff
 .filter-g  > div > dl > dd.text { padding-top: 7px; }
 .filter-g  > div.table_bt { height: 58px;background: #f2f2f2;padding:10px 20px; }
 
-
 /*//弹窗三联动*/
 .select-main { visibility: hidden;width: 460px;overflow: hidden;position: absolute;box-sizing: border-box;z-index: 99;}
 .select-main.list-box {width: 460px;height: 190px;}
@@ -72,7 +92,7 @@ body .layui-laydate .layui-this {background-color:#1E9FFF !important;color: #fff
 #list-scroll, #list-scroll1 ,#list-scroll2{box-shadow: 1px 0 3px rgba(0,0,0,.1) }
 #list-scroll1,  #list-scroll{border-right: 1px solid #f2f2f2;}
 .list-box .list-scroll .scroll-item {height: 36px;line-height: 36px; cursor: pointer;text-align: center;
-	overflow: hidden; 
+	overflow: hidden;
 	text-overflow:ellipsis;
 	white-space: nowrap;
 }

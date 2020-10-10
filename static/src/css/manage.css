@@ -1,7 +1,7 @@
 html,body {height: 100%;background: #f0f3fa;position: relative;}
 /*头*/
-#header_m {height:8%;width: 100%;background-color: #303848;position: relative;}
-#header_m  .logo { height: 100%;width: 200px;background: #1f2738;position: relative}
+#header_m {height:76px;width:100%;background-color:#fff;position: relative;box-shadow: 1px 2px 15px 1px #e1dede ;z-index: 99;}
+#header_m  .logo { height: 100%;width: 200px;background: #fff;position: relative}
 #header_m  .logo .admin-logo { position: absolute;left:50%;top:50%;display: block;height: 23px;width: 145px;margin-top:-11.5px;margin-left: -72.5px;}
 #header_m  .author { position: absolute;top:50%;color:#fff;right: 34px;height: 44px; margin-top: -22px;}
 #header_m  .author span {margin-right: 11px;font-size: 16px;}
@@ -9,27 +9,27 @@ html,body {height: 100%;background: #f0f3fa;position: relative;}
 #header_m  .author img { width: 44px;height: 44px;border-radius:50%;}
 #header_m  .author  .outBtn {margin-left:30px;}
 #header_m  .author  a { color:#fff; }
-
+#header_m  .block { width:240px;left: 0;bottom:-18px;background:#096dd9;height:18px;position: absolute;z-index: 999}
 /*布局*/
-.mianWrap {position:relative;height: 92%;}
-.article_nav {  width: 200px; height: 100%;position: absolute;top:0;overflow: hidden;}
-#content {position: absolute;left: 200px;right: 10px;top:0;bottom:2px;overflow:hidden;visibility:hidden;background-color:#f7f7f7;}
+.mianWrap {position:relative;height: calc(100% - 76px);}
+.article_nav {  width: 240px; height: 100%;position: absolute;top:0;overflow: hidden;}
+#content {position: absolute;left:240px;right: 10px;top:0;bottom:2px;overflow:hidden;visibility:hidden;background-color:#f7f7f7;}
 
 /*左边nav*/
+.nav_content {  background: #096dd9;padding: 10px 0;height:100%;width: 100%;overflow:hidden;color:#989ca4;}
+.nav_content .inner {margin-bottom: 60px;visibility:hidden;}
 .article_nav ul {margin-bottom: 4px;display: none;}
 .article_nav li a { display: block;height: 36px;line-height: 36px;font-size: 16px;cursor: pointer;}
 .article_nav li a:hover {text-decoration: none;}
-.article_nav .title { color: #989ca4; font-size: 17px;cursor: pointer;height: 52px; line-height: 52px; padding-left:18px;}
+.article_nav .title { color: #fff; font-size: 17px;cursor: pointer;height: 52px; line-height: 52px; padding-left:18px;}
 .article_nav .title i {margin:0 15px;}
 .article_nav .model.active ul { display: block; }
 .article_nav .model.open ul{ display: block; }
 .article_nav li{margin-bottom: 8px;}
-.article_nav li a {  color: #989ca4;display: block;height: 45px;line-height: 45px;padding-left: 76px;}
+.article_nav li a {  color: #fff;display: block;height: 45px;line-height: 45px;padding-left: 76px;}
 .article_nav li.active a { background:#20b681; color:#fff; }
-.article_nav .head { color:#fff;font-size: 18px;margin-bottom: 20px; }
+.article_nav .head { color:#fff;font-size: 18px;margin-bottom: 20px;}
 .nav_content.nav_fixed { position: fixed;left:15px;top:15px; }
-.nav_content {  background: #303848;padding: 10px 0;height:100%;width: 200px;overflow:hidden;color:#989ca4;}
-.nav_content .inner {margin-bottom: 60px;visibility:hidden;}
 
 /*中间正文*/
 #content .content_main {background-color:#f7f7f7;padding:25px 25px 25px 30px; }
@@ -40,23 +40,13 @@ html,body {height: 100%;background: #f0f3fa;position: relative;}
 #content  .content_nav a.active {  color:#20b681;}
 
 #upload { padding-top: 20px; }
-#upload .formleft, #upload .formright { width: 45%;float: left;} 
+#upload .formleft, #upload .formright { width: 45%;float: left;}
 #upload .item {  float: left;font-size: 15px;margin-bottom: 18px;position: relative; width: 100%;}
 #upload .item .dt {text-align: right;position: absolute;left:0;top:0;bottom: 0;width: 120px;margin-right: 10px;font-size: 15px;padding-top: 6px;padding-left: 0px; }
 #upload .item .dd { float: left;width:70%; padding-left: 130px;}
 #upload .uediter,  #upload .from_dailog{position: absolute;width: 100%;left:0;top:0;right: 0;z-index: 3;cursor: pointer;padding-left: 10px;bottom: 0;}
 #upload .from_dailog {height: 38px;line-height: 38px;overflow: hidden;}
 #upload .uediter {bottom: 0;}
-
-
-
-                   
-
-           
-
-
-
-
 
 /*步骤*/
 .step {
@@ -65,20 +55,20 @@ html,body {height: 100%;background: #f0f3fa;position: relative;}
          }
          .step > div{ float: left; }
          .step > div > span {float: left;}
-         .step .num { 
+         .step .num {
             width: 38px;
             height:38px;
             border-radius: 50%;
-            text-align: center; 
+            text-align: center;
             margin-right: 10px;
             border:1px solid #ddd;
             line-height: 38px;
             color:#d6d6d6;
         }
-        .step .stepBorder { 
+        .step .stepBorder {
            width: 200px;
            height: 2px;
-           background: #eaeaea; 
+           background: #eaeaea;
            margin: 0 15px;
           margin-top: 18px;
           }
@@ -86,7 +76,7 @@ html,body {height: 100%;background: #f0f3fa;position: relative;}
               margin-top: 10px;
               color: #999;
           }
-          .step > div.active  .num{ 
+          .step > div.active  .num{
                background: #4aaaee;
                color:#fff;
                border-color: #4aaaee;
@@ -123,27 +113,29 @@ html,body {height: 100%;background: #f0f3fa;position: relative;}
    height: 100%;
    line-height: 42px;
    margin-right: 20px;
-   
+
 }
 .pannel .head .tab_item {
    cursor: move;
 }
-.pannel .head .item { 
+.pannel .head .item {
     float: left;
 }
 
  .pannel .btn-wrap {
    padding-right: 15px;
 }
+
 .pannel .btn-wrap > span{
    margin-left: 20px;
 }
+
 .pannel .btn-wrap > span:hover {
     color:#4aaaee;
 }
+
 .pannel .body .tab_box > span {margin-right: 28px;cursor: pointer;  }
 .pannel .body .tab_box > span.active { color:#4aaaee; }
-
 
 .pannel .skin_item {
    width: 112px;
@@ -151,19 +143,19 @@ html,body {height: 100%;background: #f0f3fa;position: relative;}
    margin-right: 20px;
    position: relative;
    cursor: pointer;
-  
+
 }
 
 .pannel .skin_item i {
     position: absolute;
     color: #1E9FFF;
     right: 11px;
-    bottom:37px;   
-    font-size: 18px; 
+    bottom:37px;
+    font-size: 18px;
     margin: 0;
     display: none;
 }
-.pannel .skin_item.active i { 
+.pannel .skin_item.active i {
    display: block;
   }
 
@@ -205,15 +197,15 @@ html,body {height: 100%;background: #f0f3fa;position: relative;}
    width: 47px;
    height: 79px;
    background: url("../img/skin_app.png") no-repeat;
-  background-position: -94px 0; 
+  background-position: -94px 0;
 }
 
 /*.pannel .skin_item_app  .imgWrap.green{
-  background-position: -47px 0; 
+  background-position: -47px 0;
 }
 .pannel .skin_item_app  .imgWrap.blue{
-   background-position: -94px 0; 
-} */                     
+   background-position: -94px 0;
+} */
 
 .pannel .item_layout {
      float: left;
@@ -221,7 +213,7 @@ html,body {height: 100%;background: #f0f3fa;position: relative;}
      margin-right: 40px;
      margin-bottom: 20px;
     cursor: pointer;
-    position: relative;     
+    position: relative;
 }
 
 
@@ -229,7 +221,7 @@ html,body {height: 100%;background: #f0f3fa;position: relative;}
    position: absolute;
    right: 17px;
    bottom: 50px;
-   color:#1E9FFF; 
+   color:#1E9FFF;
    font-size: 18px;
    display: none;
 }
@@ -246,7 +238,7 @@ html,body {height: 100%;background: #f0f3fa;position: relative;}
     position: relative;
     cursor: pointer;
     border:1px solid #ddd;
-    border-radius: 10px; 
+    border-radius: 10px;
     padding-top: 10px;
     position: relative;
 }
@@ -354,14 +346,14 @@ html,body {height: 100%;background: #f0f3fa;position: relative;}
    width: 100%;
    overflow: hidden;
    text-align:  center;
-} 
+}
 /*.view_box .bottom {
    margin-top: 10px;
 }*/
 
 /*公共*/
 .view_box {
-   border:1px solid #ddd; position: relative; 
+   border:1px solid #ddd; position: relative;
 }
 
 .view_box_wrap{
@@ -411,7 +403,7 @@ html,body {height: 100%;background: #f0f3fa;position: relative;}
 
 /*padding*/
 .view_box  .flood_box {
-   padding: 30px 0; 
+   padding: 30px 0;
 }
 
 
@@ -430,7 +422,7 @@ html,body {height: 100%;background: #f0f3fa;position: relative;}
    background-image: url("../img/files/bj.png");
    background-repeat: no-repeat;
    background-position: right bottom;
-   
+
 }
 
 
@@ -496,7 +488,7 @@ html,body {height: 100%;background: #f0f3fa;position: relative;}
 
 #skin_b .ss {
     background: #f6f2ef;
-   
+
 }
 
 #skin_b .bottom {

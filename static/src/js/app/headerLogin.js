@@ -1,10 +1,4 @@
-/**
- *
- * @authors Your Name (you@example.org)
- * @date    2019-02-22 15:01:00
- * @version $Id$
- */
-define(["tools","nicescroll","path","viewPhoto"],function(tool,nicescroll,path,viewPhoto){
+define(["tools","nicescroll","viewPhoto"],function(tool,nicescroll,viewPhoto){
   var nowScroll = window.sessionStorage.getItem("scroll") ? window.sessionStorage.getItem("scroll") : 0;
   window.sessionStorage.setItem("scroll","0");
   var nav = tool.cookie("nav");
