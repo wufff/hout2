@@ -1,11 +1,11 @@
 
 /**
- * 
+ *
  * @authors Your Name (you@example.org)
  * @date    2018-11-08 15:11:16
  * @version $Id$
  */
- define(["jquery","path"], function($,path) {
+ define(["jquery","paths"], function($,path) {
  	var my = {
  		viewimg: function(dom) {
  			$.fn.viewPhoto = function() {

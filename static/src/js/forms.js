@@ -1,4 +1,4 @@
-require(["headerLogin","layui","upLoad","verify","downList3","input"], function(headerLogin,layui,upload,verify) {
+require(["headerLogin","layui","upLoad","verify","downList3","input","inputWord"], function(headerLogin,layui,upload,verify) {
     var form = layui.form;
     var $ = layui.jquery;
 
@@ -7,12 +7,12 @@ require(["headerLogin","layui","upLoad","verify","downList3","input"], function(
     }
    if($("#upIco2").length > 0){
        upload.img("upIco2");
-    }    
-  
+    }
+
    if($("#upIco3").length > 0){
        upload.img("upIco2");
 
-    }      
+    }
 
    form.on('submit(form)',function(){
       return false;

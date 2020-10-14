@@ -1,4 +1,4 @@
-define(["jquery","plupload","moxie","path"],function($,plupload,moxie,path){
+define(["jquery","plupload","moxie","paths"],function($,plupload,moxie,path){
    var my =  {
          img:function(button,fun){
 			var uploader = new plupload.Uploader({
@@ -16,7 +16,7 @@ define(["jquery","plupload","moxie","path"],function($,plupload,moxie,path){
 					mime_types: [{
 						title: "Image files",
 						extensions: "jpeg,jpg,png"
-					}, ]
+					}]
 				},
 				init: {
 					PostInit: function() {
@@ -44,7 +44,7 @@ define(["jquery","plupload","moxie","path"],function($,plupload,moxie,path){
 								   var img = '<a href="'+url+'"><img src="'+ url +'" alt=""></a>'
                                    $("#"+list).append(img)
 								}
-								
+
 							});
 						});
 						uploader.start();
@@ -138,9 +138,9 @@ define(["jquery","plupload","moxie","path"],function($,plupload,moxie,path){
 									         html +=            '<a href="" class="a"><img src="" style="max-width:200px;max-height:127px;"></a>'
 									         html +=        '</div>'
 									         html +=         '<a href="javascript:void(0)" class="del_upImg" style="width:30px;margin:0 auto;display:block;color:#1E9FFF">删除</a>'
-									         html += '</div>' 
-			                               $("#"+ button +"_list" ).append(html);  
-			                               $("#"+ button +"_list" ).find(".defaul").remove(); 
+									         html += '</div>'
+			                               $("#"+ button +"_list" ).append(html);
+			                               $("#"+ button +"_list" ).find(".defaul").remove();
 			                                uploader.start();
 			                    	    }
 			            });
@@ -149,8 +149,8 @@ define(["jquery","plupload","moxie","path"],function($,plupload,moxie,path){
 							    $("#"+file.id).find("img").attr("src", url);
                                 $("#"+file.id).find(".a").attr("href", url);
 							});
-						}); 
-                       	
+						});
+
 					},
 
 					UploadProgress: function(up, file) {
@@ -242,20 +242,20 @@ define(["jquery","plupload","moxie","path"],function($,plupload,moxie,path){
 			                    	    }
 			                            uploader_mp4.start();
 			                    });
-			                  
+
 			            },
 			            UploadProgress: function(up, file) {
 			            	if(document.getElementById(file.id)){
 			            		document.getElementById(file.id).getElementsByTagName('b')[0].innerHTML = '<span>' + file.percent + "%</span>";
 			            	}
-			                
+
 			            },
 			            // Error: function(up, err) {
 			            //     document.getElementById('mp4_console').appendChild(document.createTextNode("\nError #" + err.code + ": " + err.message));
 			            // },
 
 			            OptionChanged: function(up, option_name, new_value, old_value) {
-			                  
+
 			            }
 			    }
 			});
@@ -293,7 +293,7 @@ define(["jquery","plupload","moxie","path"],function($,plupload,moxie,path){
 				init: {
 					PostInit: function() {
 						// document.getElementById('doclist').innerHTML = '';
-						
+
 					},
 
 					FilesAdded: function(up, files) {
@@ -302,7 +302,7 @@ define(["jquery","plupload","moxie","path"],function($,plupload,moxie,path){
 							// document.getElementById('img_file_size').value = file.size;
 							var id = doc;
 							document.getElementById(id).innerHTML = '<div id="' + file.id + '"> 附件. (' + plupload.formatSize(file.size) + ') <b></b></div>';
-						});						  
+						});
                         uploader_doc.start();
 					},
 					UploadProgress: function(up, file) {
@@ -329,7 +329,7 @@ define(["jquery","plupload","moxie","path"],function($,plupload,moxie,path){
 					$(id).find('.vlueInput').val(msg.data.file_path);
 					// doument.getElementById('img_str').value = document.getElementById('img_str').value + msg.data.file_path + ",";
 
-				}				
+				}
 			});
 			uploader_doc.init();
 			return uploader_doc;
@@ -339,10 +339,10 @@ define(["jquery","plupload","moxie","path"],function($,plupload,moxie,path){
     $("body").on("click",".deldoc",function(){
 		  $(this).parent().remove();
 	 })
-    
+
    $("body").on("click",".del_upImg",function(){
 		  $(this).parent().remove();
-	 })     
+	 })
 
      return my;
 })

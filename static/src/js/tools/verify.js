@@ -20,16 +20,16 @@ define(['layui'],function(layui){
         if(value == ""){
           return '用户名不能为空';
         }
-      },  
-      code: function(value, item){ 
+      },
+      code: function(value, item){
         if(value == ""){
           return '验证码不能为空';
         }
-      },            
+      },
       pass:function(value,item){
         if(!/^[\S]{6,12}$/.test(value)){
             return '密码必须6到12位，且不能出现空格';
-         }          
+         }
       },
       phone:function(value,item){
           var mobile = /^(13[0-9]{9})|(18[0-9]{9})|(14[0-9]{9})|(16[0-9]{9})|(17[0-9]{9})|(15[0-9]{9})$/;
@@ -39,19 +39,18 @@ define(['layui'],function(layui){
           }
       },
       upFile:function(value,item){
-         if(value == ""){ 
+         if(value == ""){
             $(item).parents('.upBtn_class').find(".layui-btn").addClass('border-danger');
             return "请上传文件"
          }
       },
       tags:function(value,item){
-         if(value == ""){ 
+         if(value == ""){
             $(item).parents('.tags-g').find("select").addClass('layui-form-danger');
             return "请完成下拉多选"
          }
-      }      
+      }
     });
-
 
     return {
         phone: function (value) {
@@ -76,7 +75,7 @@ define(['layui'],function(layui){
   //               return this.optional(element) || !(tel.test($.trim(value)));
   //       }, "不能为纯数字");
   //       jQuery.validator.addMethod("chcharacter", function(value, element) {//汉字
-  //               var tel = /^[\u2E80-\uFE4F]+$/; 
+  //               var tel = /^[\u2E80-\uFE4F]+$/;
   //               return this.optional(element) || (tel.test($.trim(value)));
   //       }, "请输入汉字");
 
@@ -94,4 +93,4 @@ define(['layui'],function(layui){
   //               var length = value.length;
   //               var mobile = /^(13[0-9]{9})|(18[0-9]{9})|(14[0-9]{9})|(16[0-9]{9})|(17[0-9]{9})|(15[0-9]{9})$/;
   //               return this.optional(element) || (length == 11 && mobile.test(value));
-  //       }, "请正确填写您的手机号码"); 
+  //       }, "请正确填写您的手机号码");

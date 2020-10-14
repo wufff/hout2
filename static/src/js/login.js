@@ -16,8 +16,8 @@ require(["jquery", "api"], function($, api) {
       password: user_pwd
     }, function(res) {
       api.smsg("登录成功！")
-    })
+    });
     return false;
   })
 
-})
+});

@@ -5,7 +5,7 @@ define(["layui","tools","api","ZeroClipboard"],function(layui,tool,api,ZeroClipb
 	var $ = layui.jquery;
 	var loading;
 	var dialog;
-  
+
 
   if ($("#editor").length > 0) {
         var editor_input = UE.getEditor('editor');
@@ -39,6 +39,6 @@ define(["layui","tools","api","ZeroClipboard"],function(layui,tool,api,ZeroClipb
 
 
 
-  
-    
-})
+
+
+});

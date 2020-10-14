@@ -24,5 +24,5 @@
    	name:"myExp"
    }]
 })
-
+// r.js.cmd -o app.build.js
 

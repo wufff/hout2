@@ -6,7 +6,7 @@ require.config({
 			"lay":"./lib/layer/layer",
 			"expression": "./ui/expression",
 			"album": "./ui/album",
-			"path":"./tools/path",
+			"paths":"./tools/path",
 			"page": "./tools/page",
 			"layui":"./lib/layui/layui.all",
 			"api":"./tools/api",
@@ -28,8 +28,9 @@ require.config({
 			"ZeroClipboard":"http://wufff.question.dev.dodoedu.com/static/ueditor/third-party/zeroclipboard/ZeroClipboard.min",
 			"indexLogin":"./app/indexLogin",
 			"verify":"./tools/verify",
-			"input":"./ui/add",
-			"lookMark":"./ui/lookMark"
+			"input":"./ui/editor",
+			"lookMark":"./ui/lookMark",
+		    "inputWord":"./ui/inputWord"
 	},
 	shim: {
 		"moxie":{
@@ -40,19 +41,19 @@ require.config({
 			},
           "swiper":{
          	exports:"Swiper"
-          },		  
+          },
 		  "ZeroClipboard":{
          	exports:"ZeroClipboard"
           },
          "slide":{
          	deps:['jquery']
-         },           
+         },
          "nicescroll":{
          	deps:['jquery']
-         },    
+         },
           "jui":{
          	deps:['jquery']
-         },               
+         },
           "layui":{
           	exports:"layui"
         }

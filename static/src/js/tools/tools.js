@@ -1,4 +1,4 @@
-define(['path','layui'],function(path,layui){
+define(['layui'],function(layui){
 	 var layer = layui.layer;
      var $ = jQuery = layui.jquery;
      var my =  {
@@ -6,7 +6,7 @@ define(['path','layui'],function(path,layui){
             if(str){
               layer.msg(str);
             }else{
-               layer.msg("操作成功！");  
+               layer.msg("操作成功！");
             }
             setTimeout(function(){
                   window.location.reload();
@@ -57,7 +57,7 @@ define(['path','layui'],function(path,layui){
                   window.location.href = currtUrl;
             }else{
                  window.location.href = baseUrl;
-            }            
+            }
         },
          fomartTime:function(timestamp){
          	    var date = new Date(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
@@ -70,7 +70,7 @@ define(['path','layui'],function(path,layui){
 		        return Y+M+D;
          },
         request:function  (name) {
-        var args = getQueryStringArgs ()
+        var args = getQueryStringArgs ();
         var result = "";
         if (args) {
             $.each(args, function (key, value) {
@@ -86,7 +86,7 @@ define(['path','layui'],function(path,layui){
         }else{
              return result;
         }
-       
+
        },
      cookie:function(name, value, options) {
     if (typeof value != 'undefined') { // name and value given, set cookie
@@ -129,7 +129,7 @@ define(['path','layui'],function(path,layui){
         }
         return cookieValue;
     }
-}       
+}
      }
      return my;
 })
