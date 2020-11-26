@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>index</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!--  <link rel="stylesheet" type="text/css" href="/hout2/static/src/css/bace.css"> -->
+    <link rel="stylesheet" type="text/css" href="/hout2/static/src/js/lib/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="/hout2/static/src/css/public.css">
+    <link rel="stylesheet" type="text/css" href="/hout2/static/src/css/manage.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    /*修正分页*/
+    .layui-table-page .layui-laypage {
+        float: right;
+    }
+    body .layui-table-view {
+       position: relative;
+       border-width: 1px;
+    }
+    body .layui-table-page {
+       position: absolute;
+       right: -10px;
+       bottom: -42px;
+       border-width: 0;
+     }
+
+</style>
+<body>
+<!--[if lt IE 10]>
+     <script src="http://wufff.question_images.dev.dodoedu.com/static/src/js/tools/ie_update.js"></script>
+<![endif]-->
+<div id="header_m">
+    <div class="logo">
+        <a href="" class="admin-logo">
+            <img src="http://wufff.question_images.dev.dodoedu.com/static/src/images\admin-logo.png" alt="">
+        </a>
+    </div>
+    <div class="author">
+        <span>
+            <img src="http://images.dev.dodoedu.com/question/2075ebcb964be32b.jpg" alt="">
+        </span>
+        <span class="u_role">
+            超级管理员        </span>
+        <span>
+            test02        </span>
+        <span class="outBtn">
+            <a href="/index/logOut?is_manage=1">退出</a>
+        </span>
+    </div>
+</div>
+
+<div class="clearfix mianWrap">
+    <div class="article_nav">
+        <div class="nav_content" id="article_nav" tabindex="1" style="overflow: hidden; outline: none;">
+            <div class="inner" style="visibility: visible;">
+                <div class="model active">
+                    <div class="title">
+                        <i class="fa fa-book"></i>
+                        产品管理
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <ul>
+                        <li class="">
+                            <a href="/manage/goodsList?origin=sync">产品管理</a>
+                        </li>
+                        <li class="active">
+                            <a href="/manage/authorList?origin=modify">作者列表</a>
+                        </li>
+
+                        <li class="">
+                            <a href="/manage/datamodify">数据编辑员</a>
+                        </li>
+
+                        <li class="">
+                            <a href="/manage/dataexamine">数据审核员</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="model">
+                    <div class="title">
+                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                        账户管理
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <ul>
+                        <li class="">
+                            <a href="/manage/user">个人用户</a>
+                        </li>
+                        <li class="">
+                            <a href="/manage/orguser">机构用户</a>
+                        </li>
+                        <li class="">
+                            <a href="/manage/adminuser">后台用户</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="model">
+                    <div class="title">
+                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                        订单管理
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <ul>
+                        <li class="">
+                            <a href="/manage/paylist">充值记录</a>
+                        </li>
+                        <li class="">
+                            <a href="/manage/exchangelist">兑换记录</a>
+                        </li>
+                        <li class="">
+                            <a href="/manage/buylist">购买记录</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="model">
+                    <div class="title">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        日志管理
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <ul>
+                        <li class="">
+                            <a href="/manage/goodslog">产品日志</a>
+                        </li>
+                        <li class="">
+                            <a href="/manage/syslog">操作日志</a>
+                        </li>
+                        <li class="">
+                            <a href="/manage/userlog">用户日志</a>
+                        </li>
+                        <li class="">
+                            <a href="/manage/errorlist">错误日志</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="model">
+                    <div class="title">
+                        <i class="fa fa-mobile" aria-hidden="true" style="font-size: 28px;vertical-align: middle;"></i>
+                        app相关
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <ul>
+                        <li class="">
+                            <a href="/manage/bannerList">banner管理</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="model">
+                    <div class="title">
+                        <i class="fa fa-envelope-open" aria-hidden="true"></i>
+                        反馈管理
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <ul>
+                        <li class="">
+                            <a href="/manage/feedbackList">反馈记录</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主要内容开始 -->
+    <div id="content">
+        <div class="content_main spot">
+            <div>
+                <table class="layui-table" id="table"></table>
+            </div>
+        </div>
+    </div>
+    <!-- 主要内容结束 -->
+</div>
+
+
+<script src="../static/src/js/lib/require.js"></script>
+<script type="text/javascript" src="../static/src/js/tools/re-config.js"></script>
+<script type="text/javascript" src="../static/src/js/layTable.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,122 @@
+{
+  "result": 0,
+  "msg": "获取成功",
+  "data": {
+    "user_list": [
+    {
+      "wu_id": 1,
+      "wu_userid": "8e4cefa9-e4c6-616c-a211-15199b8c3269",
+      "wu_username": "07019991smaq",
+      "wu_fullname": "张三",
+      "wu_schoolcode": "07019991",
+      "wu_sysrole": "teacher",
+      "wu_flag": 1,
+      "wu_memo": "",
+      "wu_synctime": "2020-11-18 10:49:10",
+      "wu_flag_des": "启用"
+    },{
+        "wu_id": 2,
+        "wu_userid": "8e4cefa9-e4c6-616c-a211-15199b8c3269",
+        "wu_username": "07019991smaq",
+        "wu_fullname": "李四",
+        "wu_schoolcode": "07019991",
+        "wu_sysrole": "teacher",
+        "wu_flag": 1,
+        "wu_memo": "",
+        "wu_synctime": "2020-11-18 10:49:10",
+        "wu_flag_des": "启用"
+      },{
+        "wu_id": 2,
+        "wu_userid": "8e4cefa9-e4c6-616c-a211-15199b8c3269",
+        "wu_username": "07019991smaq",
+        "wu_fullname": "王五",
+        "wu_schoolcode": "07019991",
+        "wu_sysrole": "teacher",
+        "wu_flag": 1,
+        "wu_memo": "",
+        "wu_synctime": "2020-11-18 10:49:10",
+        "wu_flag_des": "启用"
+      },{
+        "wu_id": 2,
+        "wu_userid": "8e4cefa9-e4c6-616c-a211-15199b8c3269",
+        "wu_username": "07019991smaq",
+        "wu_fullname": "王五",
+        "wu_schoolcode": "07019991",
+        "wu_sysrole": "teacher",
+        "wu_flag": 1,
+        "wu_memo": "",
+        "wu_synctime": "2020-11-18 10:49:10",
+        "wu_flag_des": "启用"
+      },{
+        "wu_id": 2,
+        "wu_userid": "8e4cefa9-e4c6-616c-a211-15199b8c3269",
+        "wu_username": "07019991smaq",
+        "wu_fullname": "李四",
+        "wu_schoolcode": "07019991",
+        "wu_sysrole": "teacher",
+        "wu_flag": 1,
+        "wu_memo": "",
+        "wu_synctime": "2020-11-18 10:49:10",
+        "wu_flag_des": "启用"
+      },{
+        "wu_id": 2,
+        "wu_userid": "8e4cefa9-e4c6-616c-a211-15199b8c3269",
+        "wu_username": "07019991smaq",
+        "wu_fullname": "王五",
+        "wu_schoolcode": "07019991",
+        "wu_sysrole": "teacher",
+        "wu_flag": 1,
+        "wu_memo": "",
+        "wu_synctime": "2020-11-18 10:49:10",
+        "wu_flag_des": "启用"
+      },{
+        "wu_id": 2,
+        "wu_userid": "8e4cefa9-e4c6-616c-a211-15199b8c3269",
+        "wu_username": "07019991smaq",
+        "wu_fullname": "王五",
+        "wu_schoolcode": "07019991",
+        "wu_sysrole": "teacher",
+        "wu_flag": 1,
+        "wu_memo": "",
+        "wu_synctime": "2020-11-18 10:49:10",
+        "wu_flag_des": "启用"
+      },{
+        "wu_id": 2,
+        "wu_userid": "8e4cefa9-e4c6-616c-a211-15199b8c3269",
+        "wu_username": "07019991smaq",
+        "wu_fullname": "李四",
+        "wu_schoolcode": "07019991",
+        "wu_sysrole": "teacher",
+        "wu_flag": 1,
+        "wu_memo": "",
+        "wu_synctime": "2020-11-18 10:49:10",
+        "wu_flag_des": "启用"
+      },{
+        "wu_id": 2,
+        "wu_userid": "8e4cefa9-e4c6-616c-a211-15199b8c3269",
+        "wu_username": "07019991smaq",
+        "wu_fullname": "王五",
+        "wu_schoolcode": "07019991",
+        "wu_sysrole": "teacher",
+        "wu_flag": 1,
+        "wu_memo": "",
+        "wu_synctime": "2020-11-18 10:49:10",
+        "wu_flag_des": "启用"
+      },{
+        "wu_id": 2,
+        "wu_userid": "8e4cefa9-e4c6-616c-a211-15199b8c3269",
+        "wu_username": "07019991smaq",
+        "wu_fullname": "王五",
+        "wu_schoolcode": "07019991",
+        "wu_sysrole": "teacher",
+        "wu_flag": 1,
+        "wu_memo": "",
+        "wu_synctime": "2020-11-18 10:49:10",
+        "wu_flag_des": "启用"
+      }
+    ],
+    "page": 1,
+    "rowcount": 1,
+    "totalcount": 80
+  }
+}
