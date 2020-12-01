@@ -28,12 +28,15 @@
        bottom: -42px;
        border-width: 0;
      }
-
+    body .layui-table-cell .layui-table-link {
+     margin: 0 6px;
+    }
 </style>
 <body>
 <!--[if lt IE 10]>
      <script src="http://wufff.question_images.dev.dodoedu.com/static/src/js/tools/ie_update.js"></script>
 <![endif]-->
+
 <div id="header_m">
     <div class="logo">
         <a href="" class="admin-logo">
@@ -55,6 +58,7 @@
 </div>
 
 <div class="clearfix mianWrap">
+
     <div class="article_nav">
         <div class="nav_content" id="article_nav" tabindex="1" style="overflow: hidden; outline: none;">
             <div class="inner" style="visibility: visible;">
@@ -168,8 +172,64 @@
     <!-- 主要内容开始 -->
     <div id="content">
         <div class="content_main spot">
+            <form class="filter-g layui-form" lay-filter="filter">
+                <div class="clearfix">
+                    <dl>
+                        <dt>
+                            分类：
+                        </dt>
+                        <dd class="md-w">
+                            <select name="classify">
+                                <option value="1">132</option>
+                                <option value="2">132</option>
+                                <option value="3">132</option>
+                            </select>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            分类二：
+                        </dt>
+                        <dd class="lg-w">
+                            <select name="classify2">
+                                <option value="a">132</option>
+                                <option value="b">132</option>
+                                <option value="c">132</option>
+                            </select>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            分类三的选项：
+                        </dt>
+                        <dd class="sm-w">
+                            <select name="" id="classify3">
+                                <option value="m">正常</option>
+                                <option value="l">禁用</option>
+                                <option value="n">未审核</option>
+                            </select>
+                        </dd>
+                    </dl>
+                    <dl class="bts">
+                        <dt>
+                            分类四：
+                        </dt>
+                        <dd class="lg">
+                            <input type="text" name="classify4" class="layui-input" placeholder="分类四">
+                        </dd>
+                        <dt class="bt">
+                            <button class="layui-btn layui-btn-normal"  lay-submit  lay-filter="filter">查询</button>
+                        </dt>
+                    </dl>
+                </div>
+            </form>
             <div>
-                <table class="layui-table" id="table"></table>
+                <table class="layui-table" id="table" lay-filter="test"></table>
+                <script type="text/html" id="barDemo">
+                    <a class="layui-table-link" lay-event="detail">查看</a>
+                    <a class="layui-table-link" lay-event="edit">编辑</a>
+                    <a class="layui-table-link" lay-event="del">删除</a>
+                </script>
             </div>
         </div>
     </div>
